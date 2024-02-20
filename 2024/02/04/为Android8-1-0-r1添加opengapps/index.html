@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>为Android8.1.0_r1添加opengapps | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1、添加opengapps的下载地址修改在AOSP源码根路径下的.repo&#x2F;manifests&#x2F;default.xml 1owner@ubuntu:~&#x2F;srcAndroid$ gedit .repo&#x2F;manifests&#x2F;default.xml  在末尾前添加内容 12345678910111213&lt;remote name&#x3D;&quot;opengapps&quot; fet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为Android8.1.0_r1添加opengapps">
+<meta property="og:url" content="http://example.com/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、添加opengapps的下载地址修改在AOSP源码根路径下的.repo&#x2F;manifests&#x2F;default.xml 1owner@ubuntu:~&#x2F;srcAndroid$ gedit .repo&#x2F;manifests&#x2F;default.xml  在末尾前添加内容 12345678910111213&lt;remote name&#x3D;&quot;opengapps&quot; fet">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-04T11:08:31.000Z">
+<meta property="article:modified_time" content="2024-02-20T14:07:42.857Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="aosp">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="opengapps">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-为Android8-1-0-r1添加opengapps" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/" class="article-date">
+  <time class="dt-published" datetime="2024-02-04T11:08:31.000Z" itemprop="datePublished">2024-02-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      为Android8.1.0_r1添加opengapps
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="1、添加opengapps的下载地址"><a href="#1、添加opengapps的下载地址" class="headerlink" title="1、添加opengapps的下载地址"></a>1、添加opengapps的下载地址</h3><p>修改在AOSP源码根路径下的.repo&#x2F;manifests&#x2F;default.xml</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid$ gedit .repo/manifests/default.xml </span><br></pre></td></tr></table></figure>
+<p>在末尾前添加内容</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">remote</span> <span class="attr">name</span>=<span class="string">&quot;opengapps&quot;</span> <span class="attr">fetch</span>=<span class="string">&quot;https://github.com/opengapps/&quot;</span>  /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">remote</span> <span class="attr">name</span>=<span class="string">&quot;opengapps-gitlab&quot;</span> <span class="attr">fetch</span>=<span class="string">&quot;https://gitlab.opengapps.org/opengapps/&quot;</span>  /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">path</span>=<span class="string">&quot;vendor/opengapps/build&quot;</span> <span class="attr">name</span>=<span class="string">&quot;aosp_build&quot;</span> <span class="attr">revision</span>=<span class="string">&quot;master&quot;</span> <span class="attr">remote</span>=<span class="string">&quot;opengapps&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">path</span>=<span class="string">&quot;vendor/opengapps/sources/all&quot;</span> <span class="attr">name</span>=<span class="string">&quot;all&quot;</span> <span class="attr">clone-depth</span>=<span class="string">&quot;1&quot;</span> <span class="attr">revision</span>=<span class="string">&quot;master&quot;</span> <span class="attr">remote</span>=<span class="string">&quot;opengapps-gitlab&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- arm64 depends on arm --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">path</span>=<span class="string">&quot;vendor/opengapps/sources/arm&quot;</span> <span class="attr">name</span>=<span class="string">&quot;arm&quot;</span> <span class="attr">clone-depth</span>=<span class="string">&quot;1&quot;</span> <span class="attr">revision</span>=<span class="string">&quot;master&quot;</span> <span class="attr">remote</span>=<span class="string">&quot;opengapps-gitlab&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">path</span>=<span class="string">&quot;vendor/opengapps/sources/arm64&quot;</span> <span class="attr">name</span>=<span class="string">&quot;arm64&quot;</span> <span class="attr">clone-depth</span>=<span class="string">&quot;1&quot;</span> <span class="attr">revision</span>=<span class="string">&quot;master&quot;</span> <span class="attr">remote</span>=<span class="string">&quot;opengapps-gitlab&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">path</span>=<span class="string">&quot;vendor/opengapps/sources/x86&quot;</span> <span class="attr">name</span>=<span class="string">&quot;x86&quot;</span> <span class="attr">clone-depth</span>=<span class="string">&quot;1&quot;</span> <span class="attr">revision</span>=<span class="string">&quot;master&quot;</span> <span class="attr">remote</span>=<span class="string">&quot;opengapps-gitlab&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">path</span>=<span class="string">&quot;vendor/opengapps/sources/x86_64&quot;</span> <span class="attr">name</span>=<span class="string">&quot;x86_64&quot;</span> <span class="attr">clone-depth</span>=<span class="string">&quot;1&quot;</span> <span class="attr">revision</span>=<span class="string">&quot;master&quot;</span> <span class="attr">remote</span>=<span class="string">&quot;opengapps-gitlab&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、安装lfs等工具"><a href="#2、安装lfs等工具" class="headerlink" title="2、安装lfs等工具"></a>2、安装lfs等工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid$ sudo apt install git-lfs</span><br><span class="line">[sudo] password <span class="keyword">for</span> owner: </span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">E: Unable to locate package git-lfs</span><br><span class="line">owner@ubuntu:~/srcAndroid$ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash</span><br><span class="line">Detected operating system as Ubuntu/xenial.</span><br><span class="line">Checking <span class="keyword">for</span> curl...</span><br><span class="line">Detected curl...</span><br><span class="line">Checking <span class="keyword">for</span> gpg...</span><br><span class="line">Detected gpg...</span><br><span class="line">Detected apt version as 1.2.32ubuntu0.2</span><br><span class="line">Running apt-get update... <span class="keyword">done</span>.</span><br><span class="line">Installing apt-transport-https... <span class="keyword">done</span>.</span><br><span class="line">Installing /etc/apt/sources.list.d/github_git-lfs.list...done.</span><br><span class="line">Importing packagecloud gpg key... Packagecloud gpg key imported to /etc/apt/keyrings/github_git-lfs-archive-keyring.gpg</span><br><span class="line"><span class="keyword">done</span>.</span><br><span class="line">Running apt-get update... <span class="keyword">done</span>.</span><br><span class="line"></span><br><span class="line">The repository is setup! You can now install packages.</span><br><span class="line">owner@ubuntu:~/srcAndroid$ sudo apt install git-lfs</span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">The following packages were automatically installed and are no longer required:</span><br><span class="line">  linux-headers-4.4.0-31 linux-headers-4.4.0-31-generic linux-image-4.4.0-31-generic linux-image-extra-4.4.0-31-generic</span><br><span class="line">Use <span class="string">&#x27;sudo apt autoremove&#x27;</span> to remove them.</span><br><span class="line">The following NEW packages will be installed:</span><br><span class="line">  git-lfs</span><br><span class="line">0 upgraded, 1 newly installed, 0 to remove and 243 not upgraded.</span><br><span class="line">Need to get 7168 kB of archives.</span><br><span class="line">After this operation, 15.6 MB of additional disk space will be used.</span><br><span class="line">Get:1 https://packagecloud.io/github/git-lfs/ubuntu xenial/main amd64 git-lfs amd64 3.2.0 [7168 kB]</span><br><span class="line">Fetched 7168 kB <span class="keyword">in</span> 2s (2483 kB/s)  </span><br><span class="line">Selecting previously unselected package git-lfs.</span><br><span class="line">(Reading database ... 241488 files and directories currently installed.)</span><br><span class="line">Preparing to unpack .../git-lfs_3.2.0_amd64.deb ...</span><br><span class="line">Unpacking git-lfs (3.2.0) ...</span><br><span class="line">Processing triggers <span class="keyword">for</span> man-db (2.7.5-1) ...</span><br><span class="line">Setting up git-lfs (3.2.0) ...</span><br><span class="line">Git LFS initialized.</span><br><span class="line">owner@ubuntu:~/srcAndroid$ git lfs install</span><br><span class="line">Git LFS initialized.</span><br><span class="line">owner@ubuntu:~/srcAndroid$ sudo apt install lunzip</span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">The following packages were automatically installed and are no longer required:</span><br><span class="line">  linux-headers-4.4.0-31 linux-headers-4.4.0-31-generic linux-image-4.4.0-31-generic linux-image-extra-4.4.0-31-generic</span><br><span class="line">Use <span class="string">&#x27;sudo apt autoremove&#x27;</span> to remove them.</span><br><span class="line">The following NEW packages will be installed:</span><br><span class="line">  lunzip</span><br><span class="line">0 upgraded, 1 newly installed, 0 to remove and 243 not upgraded.</span><br><span class="line">Need to get 21.7 kB of archives.</span><br><span class="line">After this operation, 80.9 kB of additional disk space will be used.</span><br><span class="line">Get:1 http://mirrors.aliyun.com/ubuntu xenial/universe amd64 lunzip amd64 1.7-1 [21.7 kB]</span><br><span class="line">Fetched 21.7 kB <span class="keyword">in</span> 0s (90.5 kB/s)</span><br><span class="line">Selecting previously unselected package lunzip.</span><br><span class="line">(Reading database ... 241527 files and directories currently installed.)</span><br><span class="line">Preparing to unpack .../lunzip_1.7-1_amd64.deb ...</span><br><span class="line">Unpacking lunzip (1.7-1) ...</span><br><span class="line">Processing triggers <span class="keyword">for</span> man-db (2.7.5-1) ...</span><br><span class="line">Setting up lunzip (1.7-1) ...</span><br></pre></td></tr></table></figure>
+<h3 id="3、同步opengapps代码"><a href="#3、同步opengapps代码" class="headerlink" title="3、同步opengapps代码"></a>3、同步opengapps代码</h3><h4 id="3-1、不验证ssl"><a href="#3-1、不验证ssl" class="headerlink" title="3.1、不验证ssl"></a>3.1、不验证ssl</h4><p>添加下面命令，否则gitlab拉取会出错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid$ git config --global http.sslVerify <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-2、同步代码"><a href="#3-2、同步代码" class="headerlink" title="3.2、同步代码"></a>3.2、同步代码</h4><p>同步opengapps代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid$ ~/repo <span class="built_in">sync</span></span><br><span class="line">owner@ubuntu:~/srcAndroid$ ~/repo forall -c <span class="string">&quot;pwd;git lfs pull&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4、编译"><a href="#4、编译" class="headerlink" title="4、编译"></a>4、编译</h3><h4 id="4-1、修改配置文件，将opengapps添加到系统编译"><a href="#4-1、修改配置文件，将opengapps添加到系统编译" class="headerlink" title="4.1、修改配置文件，将opengapps添加到系统编译"></a>4.1、修改配置文件，将opengapps添加到系统编译</h4><p>编辑device-sailfish.mk文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid$ gedit device/google/marlin/device-sailfish.mk</span><br></pre></td></tr></table></figure>
+<p>在文件末尾添加</p>
+<figure class="highlight make"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GAPPS_VARIANT := micro</span><br><span class="line"><span class="variable">$(<span class="built_in">call</span> inherit-product, vendor/opengapps/build/opengapps-packages.mk)</span></span><br></pre></td></tr></table></figure>
+<p>添加gms后，编译system.img时（在整个编译的99%），system image is out of space，The max is 2048 MB错误，所以将GAPPS_VARIANT值由mini改为micro，最终成功编译。</p>
+<p>编辑aosp_sailfish.mk文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid$ gedit device/google/marlin/aosp_sailfish.mk</span><br></pre></td></tr></table></figure>
+<p>修改如下值为false</p>
+<figure class="highlight make"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PRODUCT_RESTRICT_VENDOR_FILES := false</span><br></pre></td></tr></table></figure>
+<h4 id="4-2、正常编译"><a href="#4-2、正常编译" class="headerlink" title="4.2、正常编译"></a>4.2、正常编译</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">lunch aosp_sailfish-userdebug</span><br><span class="line">make -j8</span><br></pre></td></tr></table></figure>
+<h3 id="5、参考"><a href="#5、参考" class="headerlink" title="5、参考"></a>5、参考</h3><p>OpenGApps仓库地址：<br><a target="_blank" rel="noopener" href="https://github.com/opengapps/aosp_build">https://github.com/opengapps/aosp_build</a></p>
+<p>GApps不完全等同GMS (Google Service Framework，Google服務框架)，扫盲<br><a target="_blank" rel="noopener" href="https://ivonblog.com/posts/android-gapps-comparison/">https://ivonblog.com/posts/android-gapps-comparison/</a></p>
+<p>各个包full、mini等包含app的区别<br><a target="_blank" rel="noopener" href="https://github.com/opengapps/opengapps/wiki/Package-Comparison">https://github.com/opengapps/opengapps/wiki/Package-Comparison</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.xistor.top/post/add_opengapps_to_aosp/">https://blog.xistor.top/post/add_opengapps_to_aosp/</a><br><a target="_blank" rel="noopener" href="https://c55jeremy-tech.blogspot.com/2019/04/aosppixel-2-romrom.html">https://c55jeremy-tech.blogspot.com/2019/04/aosppixel-2-romrom.html</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/DXCyber409/p/15417423.html">https://www.cnblogs.com/DXCyber409/p/15417423.html</a><br><a target="_blank" rel="noopener" href="https://monkd404.github.io/2020/11/10/%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%99%E4%B8%80%E5%8F%B0%E5%AE%8C%E7%BE%8E%E6%B5%8B%E8%AF%95%E6%9C%BA/">https://monkd404.github.io/2020/11/10/%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%99%E4%B8%80%E5%8F%B0%E5%AE%8C%E7%BE%8E%E6%B5%8B%E8%AF%95%E6%9C%BA/</a></p>
+<h3 id="6、其他相关知识"><a href="#6、其他相关知识" class="headerlink" title="6、其他相关知识"></a>6、其他相关知识</h3><ul>
+<li><p>设备注册（暂时也没用）<br>  <a target="_blank" rel="noopener" href="https://www.google.com/android/uncertified/">https://www.google.com/android/uncertified/</a></p>
+<p>  挂上代理，进入Play商店，等待出现设备未验证的提示，此时才会生成一个GMS ANDROID ID<br>  adb root ;<br>  adb shell ‘sqlite3 &#x2F;data&#x2F;data&#x2F;com.google.android.gsf&#x2F;databases&#x2F;gservices.db “select * from main where name &#x3D; &quot;android_id&quot;;”‘<br>  在 <a target="_blank" rel="noopener" href="https://www.google.com/android/uncertified/%E4%B8%AD%E5%A1%AB%E5%85%A5">https://www.google.com/android/uncertified/中填入</a> GMS ANDROID ID 即可。</p>
+<p>  注：平台原厂一般会将对应的设备进行google认证，在\device\xxx\xxx\device.mk 文件中会配置对应的fingerprint，由以下信息组成：</p>
+<p>  BUILD_FINGERPRINT :&#x3D; $(PRODUCT_BRAND)&#x2F;$(GP_TARGET_PRODUCT)&#x2F;$(GP_TARGET_DEVICE):$(PLATFORM_VERSION)&#x2F;$(BUILD_ID)&#x2F;$(BF_BUILD_NUMBER):$(TARGET_BUILD_VARIANT)&#x2F;$(BUILD_VERSION_TAGS)</p>
+<p>  通过读取系统属性[ro.build.fingerprint]或[ro.vendor.build.fingerprint]查看fingerprint信息，如果设备已经过了google认证，则导入GMS包后可直接登录Google账号</p>
+</li>
+<li><p>GApps不完全等同GMS<br>  GApps不完全等同GMS (Google Service Framework，Google服務框架)，後者為Google開發的專有軟體，需付費取得認證才可內建在系統；相較之下GApps為第三方開發者維護的版本，可自由安裝使用。<br>  GApps的功用等同一般市售手機搭載的GMS框架。由於GMS為Google開發的專有軟體，使用商標要付錢，手機廠商花錢買授權獲得認證後，便可以將GMS隨手機一起出貨 (參見 Android相容計畫)。 但第三方ROM可不是這樣了，部分第三方ROM開發者為避免爭議選擇不內建GApps，譬如 LineageOS，官網的ROM組建不包含GApps，要使用者自己刷第三方開發者維護的GApps。<br>  部份XDA開發者仍會在ROM內建GApps，嚴格來說這是違法的。GApps因為是系統服務，一般而言得用手機Recovery刷入，無法直接用APK安裝。</p>
+</li>
+<li><p>Android GMS 集成方法<br>  下载zip包<br>  A 在 <a target="_blank" rel="noopener" href="https://opengapps.org/">https://opengapps.org/</a> 网站上按照：</p>
+<p>  1, CPU 的架构</p>
+<p>  2,android 版本</p>
+<p>  3，需要下载的包的版本<br>  一般选择 full</p>
+<p>  recovery刷入</p>
+<p>  其他版本解释如下：</p>
+<p>  sup<br>  包含了所有 GApps ，像韩语日语中文拼音中文注音输入法等。（请注意：如果你是用的是基于原生的 ROM ，本版本会<br>  替换相机，通讯录等等所有有关应用）。体积 1G 左右，如果 System 分区剩余空间不够，就会刷入失败。</p>
+<p>  stock<br>  类似于 Google Pixel 出厂内置的 GApps ，相比 super 版少了其他语种的输入法以及 Google 地球等。（请注意：如果你<br>  是用的是基于原生的 ROM ，本版本会替换相机，通讯录等等所有有关应用）。体积 820M~840M 左右，如果 System 分<br>  区剩余空间不够，就会刷入失败。</p>
+<p>  full<br>  与 stock 版所包含的内容相同，但此版本不会替换手机原本的应用。体积 670~690M 左右，如果 System 分区剩余空间不<br>  够，就会刷入失败。</p>
+<p>  mini<br>  包含基础的 Google 服务框架，以及一些影响力较大的 GApps ，相比 full 版去掉了 Docs 等应用。体积 370M<del>390M<br>  左右，如果 System 分区剩余空间不够，就会刷入失败。<br>  micro<br>  包含基础的 Google 服务框架和 Gmail 等常见 GApps。体积 190</del>210M 左右，如果 System 分区剩余空间不够，就会刷<br>  入失败。</p>
+<p>  nano<br>  包含基础的 Google 服务框架，但不会有其他 不必要的 GApps。体积 160M~180M 左右，如果 System 分区剩余空间不<br>  够，就会刷入失败。</p>
+<p>  pico<br>  包含最迷你的 Google 服务框架，但由于框架并非完整，部分 GApps 可能无法运行。体积 110~120M 左右，如果 System<br>  分区剩余空间不够，就会刷入失败。</p>
+<p>  这里为了方便一般下载super版本，因为其他版本有时候会少一些apk。</p>
+<p>  B 下载的压缩包一般命名为 open_gapps-arm64-9.0-micro-20220205.zip 解压后：</p>
+<p>  Core 和 Optional 目录下为谷歌服务核心文件和应用，需要预置到源码中。<br>  GApps 目录下为一些功能应用，可不预置到源码中。<br>  使用 for lz in *.lz;do lzip -d $lz; done 命令循环解压 lz 结尾的压缩包<br>  在源码中新建 根目录&#x2F;google 文件夹放置需要 apk 如下：</p>
+<p>  原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_56343264/article/details/131411217">https://blog.csdn.net/m0_56343264/article/details/131411217</a></p>
+</li>
+<li><p>手机型号对照<br>  手机型号     年份      内部研发代号<br>  Pixel       2016      Sailfish（旗鱼）<br>  Pixel XL    2016      Marlin（马林鱼）<br>  Pixel 2     2017      Walleye（玻璃梭鲈）<br>  Pixel 2 XL  2017      Taimen（鳟鱼）Muskie（后取消了），Wahoo was used in the application package name there, but now we know that Wahoo is actually a reference to the unified kernel for the Pixel 2 and Pixel 2 XL.<br>  Pixel 3     2018      Blueline （蓝鳍鱼）<br>  Pixel 3 XL  2018      Crosshatch （十字线鱼）<br>  Pixel 3a    2019      Sargo （重牙鲷）<br>  Pixel 3a XL 2019      Bonito （鲣鱼）<br>  Pixel 4     2019      Flame （火焰鱼）<br>  Pixel 4 XL  2019      Coral （珊瑚鱼）<br>  Pixel 4a    2020      Sunfish（翻车鱼）<br>  Pixel 4a 5G 2020      Bramble（荆棘鱼）<br>  Pixel 5     2020      Redfin（红鳍鱼）<br>  Pixel 5a    2021      Barbet（巨嘴鸟）<br>  Pixel 6     2021      Oriole（黄鹂）<br>  Pixel 6 pro 2021      Raven（乌鸦）</p>
+<p>  注意：Pixel 5a以后不再使用鱼类作为代号，改用鸟类。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/" data-id="clsufx40s003ukmcr4osdftr3" data-title="为Android8.1.0_r1添加opengapps" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aosp/" rel="tag">aosp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opengapps/" rel="tag">opengapps</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/02/04/Android8-1-0-r1%E7%BC%96%E8%AF%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Android8.1.0_r1编译</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/asm/">asm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blackhat/">blackhat</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/book/">book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reverse/">reverse</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/virus/">virus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%93%E5%8C%85/">抓包</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/">源码编译</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub-Pages/" rel="tag">GitHub Pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aosp/" rel="tag">aosp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arp/" rel="tag">arp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forensics/" rel="tag">forensics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ida/" rel="tag">ida</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idapython/" rel="tag">idapython</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kali/" rel="tag">kali</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opengapps/" rel="tag">opengapps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/peb/" rel="tag">peb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpMyAdmin/" rel="tag">phpMyAdmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tor/" rel="tag">tor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/v2ray/" rel="tag">v2ray</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vmware/" rel="tag">vmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wingIDE/" rel="tag">wingIDE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wingide/" rel="tag">wingide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wireshark/" rel="tag">wireshark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcode/" rel="tag">xcode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/GitHub-Pages/" style="font-size: 10px;">GitHub Pages</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/aosp/" style="font-size: 17.5px;">aosp</a> <a href="/tags/arp/" style="font-size: 10px;">arp</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/forensics/" style="font-size: 10px;">forensics</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/ida/" style="font-size: 12.5px;">ida</a> <a href="/tags/idapython/" style="font-size: 12.5px;">idapython</a> <a href="/tags/kali/" style="font-size: 15px;">kali</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/opengapps/" style="font-size: 10px;">opengapps</a> <a href="/tags/peb/" style="font-size: 10px;">peb</a> <a href="/tags/phpMyAdmin/" style="font-size: 10px;">phpMyAdmin</a> <a href="/tags/tor/" style="font-size: 10px;">tor</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/v2ray/" style="font-size: 12.5px;">v2ray</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/wingIDE/" style="font-size: 10px;">wingIDE</a> <a href="/tags/wingide/" style="font-size: 10px;">wingide</a> <a href="/tags/wireshark/" style="font-size: 10px;">wireshark</a> <a href="/tags/xcode/" style="font-size: 10px;">xcode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/">为Android8.1.0_r1添加opengapps</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/04/Android8-1-0-r1%E7%BC%96%E8%AF%91/">Android8.1.0_r1编译</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/04/hexo-%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">hexo 安装和配置</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/">aosp添加第三方app</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/">编译Android10源码</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

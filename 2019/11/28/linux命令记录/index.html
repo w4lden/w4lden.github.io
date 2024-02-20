@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>linux命令记录 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="1、vim命令1.1、复制粘贴 方法1使用v进入可视模式复制命令是y（yank提起）12y10 &#x2F;&#x2F;复制当前及紧跟的10行10y &#x2F;&#x2F;复制第10行 方法2（加j）1y10j &#x2F;&#x2F;复制当前行和接下来的10行 粘贴为p（put放下）  1.2、查看文件编码1:set fileencoding 2、字符串、文件查找 字符串查找1find . -name &quot;*.go&quot; | xargs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux命令记录">
+<meta property="og:url" content="http://example.com/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、vim命令1.1、复制粘贴 方法1使用v进入可视模式复制命令是y（yank提起）12y10 &#x2F;&#x2F;复制当前及紧跟的10行10y &#x2F;&#x2F;复制第10行 方法2（加j）1y10j &#x2F;&#x2F;复制当前行和接下来的10行 粘贴为p（put放下）  1.2、查看文件编码1:set fileencoding 2、字符串、文件查找 字符串查找1find . -name &quot;*.go&quot; | xargs">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-11-28T11:03:00.000Z">
+<meta property="article:modified_time" content="2024-02-20T14:07:42.846Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -67,226 +72,116 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-04T11:08:31.000Z" itemprop="datePublished">Feb 4</time>
+        <section id="main"><article id="post-linux命令记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time class="dt-published" datetime="2019-11-28T11:03:00.000Z" itemprop="datePublished">2019-11-28</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/">为Android8.1.0_r1添加opengapps</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      linux命令记录
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="1、vim命令"><a href="#1、vim命令" class="headerlink" title="1、vim命令"></a>1、vim命令</h2><h3 id="1-1、复制粘贴"><a href="#1-1、复制粘贴" class="headerlink" title="1.1、复制粘贴"></a>1.1、复制粘贴</h3><ul>
+<li>方法1<br>使用v进入可视模式<br>复制命令是y（yank提起）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y10 //复制当前及紧跟的10行</span><br><span class="line">10y //复制第10行</span><br></pre></td></tr></table></figure></li>
+<li>方法2（加j）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y10j //复制当前行和接下来的10行</span><br></pre></td></tr></table></figure>
+粘贴为p（put放下）</li>
+</ul>
+<h3 id="1-2、查看文件编码"><a href="#1-2、查看文件编码" class="headerlink" title="1.2、查看文件编码"></a>1.2、查看文件编码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> fileencoding</span><br></pre></td></tr></table></figure>
+<h2 id="2、字符串、文件查找"><a href="#2、字符串、文件查找" class="headerlink" title="2、字符串、文件查找"></a>2、字符串、文件查找</h2><ul>
+<li>字符串查找<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">&quot;*.go&quot;</span> | xargs grep <span class="string">&quot;index.html&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>文件查找<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home/username/Soft/ -name <span class="string">&#x27;gdbserver&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>定位命令<br>locate定位命令用来查找文件，如<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">locate 文件或者目录或部分名</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="3、网络相关"><a href="#3、网络相关" class="headerlink" title="3、网络相关"></a>3、网络相关</h2><ul>
+<li>重启网络<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@bt:~<span class="comment"># /etc/init.d/networking restart </span></span><br></pre></td></tr></table></figure></li>
+<li>ssh登陆<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -t root@172.16.244.100 -p 20000</span><br></pre></td></tr></table></figure></li>
+<li>修改ip信息</li>
+</ul>
+<ol>
+<li><p>修改ip地址</p>
+<p> 即时生效:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 172.16.244.100  netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
+<p> 重启生效:</p>
+<p> 修改vi &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0</p>
+</li>
+<li><p>修改default gateway</p>
+<p> 即时生效:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
+<p> 重启生效:</p>
+<p> 修改vi &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0</p>
+</li>
+<li><p>修改dns</p>
+<p> 修改vi &#x2F;etc&#x2F;resolv.conf（修改后即时生效，重启同样有效）</p>
+</li>
+<li><p>修改host name</p>
+<p> 即时生效:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname test1</span><br></pre></td></tr></table></figure>
+<p> 重启生效:</p>
+<p> 修改vi &#x2F;etc&#x2F;sysconfig&#x2F;network</p>
+</li>
+</ol>
+<h2 id="4、其他指令"><a href="#4、其他指令" class="headerlink" title="4、其他指令"></a>4、其他指令</h2><ul>
+<li>查看文件夹大小<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">du</span> -h --max-depth=1</span><br></pre></td></tr></table></figure></li>
+<li>依赖安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get -f install</span><br></pre></td></tr></table></figure></li>
+<li>挂载&#x2F;system为可读写<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o remount,rw /system</span><br></pre></td></tr></table></figure></li>
+<li>查看系统是32位还是64位(3个命令都可以)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getconf LONG_BIT 或 getconf WORD_BIT</span><br><span class="line">file /bin/ls</span><br><span class="line">lsb_release  -a</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="5、压缩解压"><a href="#5、压缩解压" class="headerlink" title="5、压缩解压"></a>5、压缩解压</h2><h3 id="5-1-tar-gz"><a href="#5-1-tar-gz" class="headerlink" title="5.1 tar.gz"></a>5.1 tar.gz</h3><p>压缩(可先切换到当前目录下，压缩文件名和被压缩文件名都可加入路径)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf 压缩文件名 .tar.gz 被压缩文件名</span><br></pre></td></tr></table></figure>
+<p>解压(解压缩后的文件只能放在当前的目录)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf 压缩文件名.tar.gz</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/11/28/linux%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/" data-id="clsufx40b000skmcrawbmdjzh" data-title="linux命令记录" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/02/python%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python语法记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/28/hexo-next%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo next主题自定义配置</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/04/Android8-1-0-r1%E7%BC%96%E8%AF%91/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-04T11:07:06.000Z" itemprop="datePublished">Feb 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/04/Android8-1-0-r1%E7%BC%96%E8%AF%91/">Android8.1.0_r1编译</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/04/hexo-%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-04T02:25:47.000Z" itemprop="datePublished">Feb 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/04/hexo-%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">hexo 安装和配置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-02T02:15:07.000Z" itemprop="datePublished">Feb 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/">aosp添加第三方app</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-10-15T06:23:16.000Z" itemprop="datePublished">Oct 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/">编译Android10源码</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/04/10/v2ray%E8%AE%A2%E9%98%85%E5%9C%B0%E5%9D%80%E5%88%B6%E4%BD%9C/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-04-10T09:28:53.000Z" itemprop="datePublished">Apr 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/10/v2ray%E8%AE%A2%E9%98%85%E5%9C%B0%E5%9D%80%E5%88%B6%E4%BD%9C/">v2ray订阅地址制作</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/06/wireshark%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-06T10:01:02.000Z" itemprop="datePublished">Mar 6</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/06/wireshark%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99/">wireshark过滤规则</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/05/ubuntu-apt-get-update-NO-PUBKEY/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-05T02:19:33.000Z" itemprop="datePublished">Mar 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/05/ubuntu-apt-get-update-NO-PUBKEY/">ubuntu apt-get update NO_PUBKEY</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-04T15:26:01.000Z" itemprop="datePublished">Mar 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/">phpMyAdmin连接MySQL8.0报错2054</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/01/%E5%88%A9%E7%94%A8scapy%E8%BF%9B%E8%A1%8Carp%E7%BC%93%E5%AD%98%E6%8A%95%E6%AF%92/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-01T09:50:52.000Z" itemprop="datePublished">Mar 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/%E5%88%A9%E7%94%A8scapy%E8%BF%9B%E8%A1%8Carp%E7%BC%93%E5%AD%98%E6%8A%95%E6%AF%92/">利用scapy进行arp缓存投毒</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

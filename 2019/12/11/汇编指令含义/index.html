@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>汇编指令含义 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="CMP OPR1，OPR2OPR1OPR2运算，影响PF和ZF(OPR1&#x3D;OPR2，ZF&#x3D;1，PF&#x3D;1;!&#x3D;,ZF&#x3D;0,PF&#x3D;0) LEA OPR1，OPR2将OPR2的地址赋给OPR1 AND OPR1，OPR2OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。 IMUL OPR1，OPR2，OPR3将OPR2*O">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编指令含义">
+<meta property="og:url" content="http://example.com/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CMP OPR1，OPR2OPR1OPR2运算，影响PF和ZF(OPR1&#x3D;OPR2，ZF&#x3D;1，PF&#x3D;1;!&#x3D;,ZF&#x3D;0,PF&#x3D;0) LEA OPR1，OPR2将OPR2的地址赋给OPR1 AND OPR1，OPR2OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。 IMUL OPR1，OPR2，OPR3将OPR2*O">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-11T08:44:08.000Z">
+<meta property="article:modified_time" content="2024-02-20T14:07:42.864Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -67,226 +71,76 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-04T11:08:31.000Z" itemprop="datePublished">Feb 4</time>
+        <section id="main"><article id="post-汇编指令含义" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/" class="article-date">
+  <time class="dt-published" datetime="2019-12-11T08:44:08.000Z" itemprop="datePublished">2019-12-11</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/asm/">asm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/">为Android8.1.0_r1添加opengapps</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      汇编指令含义
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>CMP OPR1，OPR2<br>OPR1OPR2运算，影响PF和ZF(OPR1&#x3D;OPR2，ZF&#x3D;1，PF&#x3D;1;!&#x3D;,ZF&#x3D;0,PF&#x3D;0)</p>
+<p>LEA OPR1，OPR2<br>将OPR2的地址赋给OPR1</p>
+<p>AND OPR1，OPR2<br>OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。</p>
+<p>IMUL OPR1，OPR2，OPR3<br>将OPR2*OPR3赋给OPR1。</p>
+<p>jge opr1,opr2	两数比较，前者大于等于后者则跳。jump if greater or eaual.</p>
+<p>rep stos dword ptr es:[edi]	rep重复操作前缀 stos从累加器EAX传送4个字节，到由EDI作为指针的目的串中，同时修改EDI以指向 串中的下一个单元。利用重复操作可以在串在建立一串相同的值。此指令对标志位无影响。</p>
+<p>rep 为repeat 重复之意<br>stos 为sotre string 保存字符串之意<br>ptr 为pointer 指针之意</p>
+<p>在一个函数中，它所申请的栈存放局部变量，在执行函数体运算的时候，将局部变量赋给寄存器（如eax），eax参加运算。结果保留在栈中</p>
+<p>ebp-8处存放 int i；<br>i+1；</p>
+<p>00411577 8b45f8          mov     eax,dword ptr [ebp-8]<br>0041157a 83c001          add     eax,1<br>0041157d 8945f8          mov     dword ptr [ebp-8],eax</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/" data-id="clsufx40t003vkmcrddet4pue" data-title="汇编指令含义" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/16/Swift%E8%AF%AD%E9%9F%B3%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Swift语音学习路径
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/11/PEB%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%96%E5%BE%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PEB地址的取得</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/04/Android8-1-0-r1%E7%BC%96%E8%AF%91/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-04T11:07:06.000Z" itemprop="datePublished">Feb 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/04/Android8-1-0-r1%E7%BC%96%E8%AF%91/">Android8.1.0_r1编译</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/04/hexo-%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-04T02:25:47.000Z" itemprop="datePublished">Feb 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/04/hexo-%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">hexo 安装和配置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-02T02:15:07.000Z" itemprop="datePublished">Feb 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/">aosp添加第三方app</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-10-15T06:23:16.000Z" itemprop="datePublished">Oct 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/">编译Android10源码</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/04/10/v2ray%E8%AE%A2%E9%98%85%E5%9C%B0%E5%9D%80%E5%88%B6%E4%BD%9C/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-04-10T09:28:53.000Z" itemprop="datePublished">Apr 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/10/v2ray%E8%AE%A2%E9%98%85%E5%9C%B0%E5%9D%80%E5%88%B6%E4%BD%9C/">v2ray订阅地址制作</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/06/wireshark%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-06T10:01:02.000Z" itemprop="datePublished">Mar 6</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/06/wireshark%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99/">wireshark过滤规则</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/05/ubuntu-apt-get-update-NO-PUBKEY/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-05T02:19:33.000Z" itemprop="datePublished">Mar 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/05/ubuntu-apt-get-update-NO-PUBKEY/">ubuntu apt-get update NO_PUBKEY</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-04T15:26:01.000Z" itemprop="datePublished">Mar 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/">phpMyAdmin连接MySQL8.0报错2054</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/03/01/%E5%88%A9%E7%94%A8scapy%E8%BF%9B%E8%A1%8Carp%E7%BC%93%E5%AD%98%E6%8A%95%E6%AF%92/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-03-01T09:50:52.000Z" itemprop="datePublished">Mar 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/%E5%88%A9%E7%94%A8scapy%E8%BF%9B%E8%A1%8Carp%E7%BC%93%E5%AD%98%E6%8A%95%E6%AF%92/">利用scapy进行arp缓存投毒</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

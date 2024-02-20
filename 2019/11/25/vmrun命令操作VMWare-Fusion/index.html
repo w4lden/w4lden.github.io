@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>vmrun命令操作VMWare Fusion | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="0、mac下路径有空格的环境变量设置1export XP&#x3D;&#x2F;Users&#x2F;seven&#x2F;Virtual\ Machines.localized&#x2F;Windows\ XP\ Professional&#x2F;Windows\ XP\ Professional.vmx 在正确导出变量时非常痛苦，总是确保在shell中引用变量时双引引变量，即： 1&quot;$XP&quot; 而不是 1$XP 会有意想不到的结果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vmrun命令操作VMWare Fusion">
+<meta property="og:url" content="http://example.com/2019/11/25/vmrun%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9CVMWare-Fusion/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="0、mac下路径有空格的环境变量设置1export XP&#x3D;&#x2F;Users&#x2F;seven&#x2F;Virtual\ Machines.localized&#x2F;Windows\ XP\ Professional&#x2F;Windows\ XP\ Professional.vmx 在正确导出变量时非常痛苦，总是确保在shell中引用变量时双引引变量，即： 1&quot;$XP&quot; 而不是 1$XP 会有意想不到的结果">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-11-25T08:56:42.000Z">
+<meta property="article:modified_time" content="2024-02-20T14:07:42.853Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="mac">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-vmrun命令操作VMWare-Fusion" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/25/vmrun%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9CVMWare-Fusion/" class="article-date">
+  <time class="dt-published" datetime="2019-11-25T08:56:42.000Z" itemprop="datePublished">2019-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/virus/">virus</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      vmrun命令操作VMWare Fusion
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="0、mac下路径有空格的环境变量设置"><a href="#0、mac下路径有空格的环境变量设置" class="headerlink" title="0、mac下路径有空格的环境变量设置"></a>0、mac下路径有空格的环境变量设置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> XP=/Users/seven/Virtual\ Machines.localized/Windows\ XP\ Professional/Windows\ XP\ Professional.vmx</span><br></pre></td></tr></table></figure>
+<p>在正确导出变量时非常痛苦，总是确保在shell中引用变量时双引引变量，即：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;<span class="variable">$XP</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<p>而不是</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$XP</span></span><br></pre></td></tr></table></figure>
+<p>会有意想不到的结果</p>
+<h2 id="1、列出快照"><a href="#1、列出快照" class="headerlink" title="1、列出快照"></a>1、列出快照</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">seven@Sevens-MacBook-Pro:~/Virtual Machines.localized/Windows XP Professional$ vmrun listSnapshots <span class="string">&quot;<span class="variable">$XP</span>&quot;</span></span><br><span class="line">Total snapshots: 4</span><br><span class="line">Clean</span><br><span class="line">work</span><br><span class="line">ransomware</span><br><span class="line">vulnerability</span><br></pre></td></tr></table></figure>
+<h2 id="2、恢复并启动某快照"><a href="#2、恢复并启动某快照" class="headerlink" title="2、恢复并启动某快照"></a>2、恢复并启动某快照</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vmrun revertToSnapshot <span class="string">&quot;<span class="variable">$XP</span>&quot;</span> vulnerability</span><br><span class="line">vmrun start <span class="string">&quot;<span class="variable">$XP</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3、将文件从主机拷贝到客户机"><a href="#3、将文件从主机拷贝到客户机" class="headerlink" title="3、将文件从主机拷贝到客户机"></a>3、将文件从主机拷贝到客户机</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmrun -gu Administrator -gp 123456 copyFileFromHostToGuest <span class="string">&quot;<span class="variable">$XP</span>&quot;</span> /Users/seven/Work/virus/cs/http.exe C:\\http.exe</span><br></pre></td></tr></table></figure>
+<h2 id="4、执行客户机文件"><a href="#4、执行客户机文件" class="headerlink" title="4、执行客户机文件"></a>4、执行客户机文件</h2><p>runProgramInGuest指定了允许执行到程序创建窗口并可在桌面上与用户交互（-activeWindow -interactive），并且vmrun不必等待虚拟机中的进程终止（-noWait）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmrun -gu Administrator -gp 123456 runProgramInGuest <span class="string">&quot;<span class="variable">$XP</span>&quot;</span> -noWait -activeWindow -interactive c:\\windows\\notepad.exe</span><br></pre></td></tr></table></figure>
+<h2 id="5、python脚本打印出的部分命令"><a href="#5、python脚本打印出的部分命令" class="headerlink" title="5、python脚本打印出的部分命令"></a>5、python脚本打印出的部分命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Executing revertToSnapshot please <span class="built_in">wait</span>...</span><br><span class="line">vm cmd: /Applications/VMware Fusion.app/Contents/Public/vmrun -T fusion revertToSnapshot /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional.vmx vulnerability</span><br><span class="line">Executing start please <span class="built_in">wait</span>...</span><br><span class="line">vm cmd: /Applications/VMware Fusion.app/Contents/Public/vmrun -T fusion start /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional.vmx</span><br><span class="line">Executing readVariable please <span class="built_in">wait</span>...</span><br><span class="line">vm cmd: /Applications/VMware Fusion.app/Contents/Public/vmrun -T fusion -gu Administrator -gp 123456 readVariable /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional.vmx guestEnv tmp</span><br><span class="line">Executing copyFileFromHostToGuest please <span class="built_in">wait</span>...</span><br><span class="line">vm cmd: /Applications/VMware Fusion.app/Contents/Public/vmrun -T fusion -gu Administrator -gp 123456 copyFileFromHostToGuest /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional.vmx /Users/seven/Company/Venus/2019apt/Chafer-APT/events.exe C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\events.exe</span><br><span class="line">Executing runProgramInGuest please <span class="built_in">wait</span>...</span><br><span class="line">vm cmd: /Applications/VMware Fusion.app/Contents/Public/vmrun -T fusion -gu Administrator -gp 123456 runProgramInGuest /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional.vmx -noWait -interactive -activeWindow C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\events.exe</span><br><span class="line">Executing captureScreen please <span class="built_in">wait</span>...</span><br><span class="line">vm cmd: /Applications/VMware Fusion.app/Contents/Public/vmrun -T fusion -gu Administrator -gp 123456 captureScreen /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional.vmx ./auto/reports/25469ddaeff0dd3edb0f39bbe1dcdc46/shot.bmp</span><br><span class="line">Executing <span class="built_in">suspend</span> please <span class="built_in">wait</span>...</span><br><span class="line">vm cmd: /Applications/VMware Fusion.app/Contents/Public/vmrun -T fusion <span class="built_in">suspend</span> /Users/seven/Virtual Machines.localized/Windows XP Professional/Windows XP Professional.vmx</span><br></pre></td></tr></table></figure>
+<h2 id="5、参考"><a href="#5、参考" class="headerlink" title="5、参考"></a>5、参考</h2><p><a target="_blank" rel="noopener" href="https://docs.vmware.com/cn/VMware-Fusion/11/com.vmware.fusion.using.doc/GUID-FF306A59-080E-497E-857D-F45125927FB3.html?hWord=N4IghgNiBcIE4FMBuC4BcAqB7AygOzAAcBnACyzRAF8g">vmrun 命令示例</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/11/25/vmrun%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9CVMWare-Fusion/" data-id="clsufx40h001ykmcr21umbuoj" data-title="vmrun命令操作VMWare Fusion" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/" rel="tag">mac</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/26/mac%E4%B8%8B%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mac下自动分析恶意样本
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/23/%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%83%A8%E7%BD%B2%E4%B8%A4%E4%B8%AAGitHub%E8%B4%A6%E5%8F%B7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一台电脑部署两个GitHub账号</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/asm/">asm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blackhat/">blackhat</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/book/">book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ios/">ios</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reverse/">reverse</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/virus/">virus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%93%E5%8C%85/">抓包</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/">源码编译</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub-Pages/" rel="tag">GitHub Pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aosp/" rel="tag">aosp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arp/" rel="tag">arp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forensics/" rel="tag">forensics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ida/" rel="tag">ida</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idapython/" rel="tag">idapython</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kali/" rel="tag">kali</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opengapps/" rel="tag">opengapps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/peb/" rel="tag">peb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpMyAdmin/" rel="tag">phpMyAdmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tor/" rel="tag">tor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/v2ray/" rel="tag">v2ray</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vmware/" rel="tag">vmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wingIDE/" rel="tag">wingIDE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wingide/" rel="tag">wingide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wireshark/" rel="tag">wireshark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcode/" rel="tag">xcode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 17.5px;">Android</a> <a href="/tags/GitHub-Pages/" style="font-size: 10px;">GitHub Pages</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/aosp/" style="font-size: 17.5px;">aosp</a> <a href="/tags/arp/" style="font-size: 10px;">arp</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/forensics/" style="font-size: 10px;">forensics</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/ida/" style="font-size: 12.5px;">ida</a> <a href="/tags/idapython/" style="font-size: 12.5px;">idapython</a> <a href="/tags/kali/" style="font-size: 15px;">kali</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/opengapps/" style="font-size: 10px;">opengapps</a> <a href="/tags/peb/" style="font-size: 10px;">peb</a> <a href="/tags/phpMyAdmin/" style="font-size: 10px;">phpMyAdmin</a> <a href="/tags/tor/" style="font-size: 10px;">tor</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/v2ray/" style="font-size: 12.5px;">v2ray</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/wingIDE/" style="font-size: 10px;">wingIDE</a> <a href="/tags/wingide/" style="font-size: 10px;">wingide</a> <a href="/tags/wireshark/" style="font-size: 10px;">wireshark</a> <a href="/tags/xcode/" style="font-size: 10px;">xcode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/">为Android8.1.0_r1添加opengapps</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/04/Android8-1-0-r1%E7%BC%96%E8%AF%91/">Android8.1.0_r1编译</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/04/hexo-%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">hexo 安装和配置</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/">aosp添加第三方app</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/">编译Android10源码</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
