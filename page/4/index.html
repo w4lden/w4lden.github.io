@@ -925,7 +925,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-02-22 11:44:21" itemprop="dateModified" datetime="2024-02-22T11:44:21+08:00">2024-02-22</time>
+      <time title="Modified: 2024-02-22 15:50:31" itemprop="dateModified" datetime="2024-02-22T15:50:31+08:00">2024-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -955,6 +955,9 @@
 <p>如果之后个人blog用hexo d提交代码时出现如下错误</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Permission to yyy.git denied to xxx(username)</span><br></pre></td></tr></table></figure>
 <p>是因为ssh使用了默认的认证信息（xxx）提交（ssh-add -l后有多个认证信息），而不是我们的第二个账号的认证信息（yyy），解决办法:新启一个ssh-agent并添加第二个账号的认证信息</p>
+<blockquote>
+<p>eval $(ssh-agent -s)后使用ssh-add添加的认证信息是临时的，只在当前shell有效，而ssh-agent -s后使用ssh-add添加的认证信息是永久的，新打开一个shell也有效。</p>
+</blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ <span class="built_in">eval</span> $(ssh-agent)</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_yyy</span><br></pre></td></tr></table></figure>
 <p>查看添加后的认证信息：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -l</span><br><span class="line">3073 SHA256:PxvHneilyyy yyy@outlook.com (RSA)</span><br></pre></td></tr></table></figure>
