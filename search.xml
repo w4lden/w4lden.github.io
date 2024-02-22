@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Git用户名邮箱的全局配置和单仓库配置(不同项目使用不同账号登录)</title>
+      <link href="/2024/02/22/Git%E7%94%A8%E6%88%B7%E5%90%8D%E9%82%AE%E7%AE%B1%E7%9A%84%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E5%92%8C%E5%8D%95%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE-%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95/"/>
+      <url>/2024/02/22/Git%E7%94%A8%E6%88%B7%E5%90%8D%E9%82%AE%E7%AE%B1%E7%9A%84%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E5%92%8C%E5%8D%95%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE-%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、需求"><a href="#1、需求" class="headerlink" title="1、需求"></a>1、需求</h3><p>因工作和个人的仓库地址、用户名和邮箱都不一样,很多时候一个git账号无法满足工作和个人学习并行的需求。<br>全局用户名和邮箱是本地 git 客户端的变量，可配置，不随 git 库而改变。gitee 和 github 是按邮箱来统计贡献者（Contributors）的。</p><blockquote><p>我们的目的是在特定项目里设置特定的账号!</p></blockquote><h3 id="2、全局账号和当前仓库账号"><a href="#2、全局账号和当前仓库账号" class="headerlink" title="2、全局账号和当前仓库账号"></a>2、全局账号和当前仓库账号</h3><h4 id="2-1、全局账号"><a href="#2-1、全局账号" class="headerlink" title="2.1、全局账号"></a>2.1、全局账号</h4><p>通过git config –global user.name和git config –global user.email设置的账号信息,作用于所有仓库。<br>例如:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;yourname&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your@email.com&quot;</span></span><br></pre></td></tr></table></figure><h4 id="2-2、当前仓库账号"><a href="#2-2、当前仓库账号" class="headerlink" title="2.2、当前仓库账号"></a>2.2、当前仓库账号</h4><p>可以通过git config user.name和git config user.email在某个仓库中指定特定的用户名和邮箱。<br>例如在仓库文件夹下运行:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">&quot;username&quot;</span> </span><br><span class="line">git config user.email <span class="string">&quot;email@email.com&quot;</span></span><br></pre></td></tr></table></figure><p>这会覆盖全局账号,对当前仓库生效。<br>查看账号,通过命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure><p>可以查看全局和本地账号配置信息。</p><p>一般来说,全局 Git 账号配置为个人账号会更好一些。许多开源项目推荐使用个人邮箱而非公司邮箱。<br>全局 Git 账号通常设置为你自己的个人邮箱,用于标识个人工作。根据项目需要,再单独配置不同的本地仓库账号。这样可以最大程度保持个人提交记录的完整性和连续性。</p><h3 id="3、原文链接"><a href="#3、原文链接" class="headerlink" title="3、原文链接"></a>3、原文链接</h3><p><a href="https://blog.csdn.net/inthat/article/details/132116332">https://blog.csdn.net/inthat/article/details/132116332</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>为Android8.1.0_r1添加opengapps</title>
       <link href="/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/"/>
       <url>/2024/02/04/%E4%B8%BAAndroid8-1-0-r1%E6%B7%BB%E5%8A%A0opengapps/</url>
