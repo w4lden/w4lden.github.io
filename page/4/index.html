@@ -925,7 +925,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-02-22 17:05:57" itemprop="dateModified" datetime="2024-02-22T17:05:57+08:00">2024-02-22</time>
+      <time title="Modified: 2024-02-23 14:29:16" itemprop="dateModified" datetime="2024-02-23T14:29:16+08:00">2024-02-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -947,9 +947,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="1、生成第二个ssh-key"><a href="#1、生成第二个ssh-key" class="headerlink" title="1、生成第二个ssh key"></a>1、生成第二个ssh key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-keygen -t rsa -C <span class="string">&quot;catcat@gmail.com&quot;</span></span><br></pre></td></tr></table></figure>
-<h2 id="2、打开ssh-agent-添加私钥"><a href="#2、打开ssh-agent-添加私钥" class="headerlink" title="2、打开ssh-agent,添加私钥"></a>2、打开ssh-agent,添加私钥</h2><p>当使用ssh时，系统默认只会读取 ～&#x2F;.ssh&#x2F;id_rsa 文件，不同名称的密钥不会读取，只需要将其他名称的密钥文件加入到ssh读取列表即可正常使用多个密钥文件。</p>
-<p>添加不同的ssh认证信息（本地使用不同的GitHub账号，需要不同的 SSH 认证登录）：</p>
+          <blockquote>
+<p>如果有多个密钥，则需要在 ~&#x2F;.ssh&#x2F;config 中进行配置，一般来说 ssh agent 程序可以根据配置自动加载并管理这些密钥；但如果发现某个密钥 没有加载则也可以手动使用 ssh-add 命令将某个私钥交给 ssh-agent 保管。</p>
+</blockquote>
+<h2 id="1、生成第二个ssh-key"><a href="#1、生成第二个ssh-key" class="headerlink" title="1、生成第二个ssh key"></a>1、生成第二个ssh key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-keygen -t rsa -C <span class="string">&quot;catcat@gmail.com&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2、打开ssh-agent-添加私钥"><a href="#2、打开ssh-agent-添加私钥" class="headerlink" title="2、打开ssh-agent,添加私钥"></a>2、打开ssh-agent,添加私钥</h2><p>当使用ssh时，系统默认只会读取 ～&#x2F;.ssh&#x2F;id_rsa 文件，不同名称的密钥不会读取，只需要将其他名称的密钥文件加入到ssh读取列表即可正常使用多个密钥文件。<br>添加不同的ssh认证信息（本地使用不同的GitHub账号，需要不同的 SSH 认证登录）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-agent -s</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_catcat</span><br></pre></td></tr></table></figure>
 <p>查看添加后的认证信息：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -l</span><br><span class="line">3072 SHA256:PxvHneilxxx xxx@outlook.com (RSA)</span><br><span class="line">3073 SHA256:PxvHneilyyy yyy@outlook.com (RSA)</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -L</span><br><span class="line">ssh-rsa AAAAB3Nzxxx xxx@outlook.com</span><br><span class="line">ssh-rsa AAAAB3Nzyyy yyy@outlook.com</span><br></pre></td></tr></table></figure>
