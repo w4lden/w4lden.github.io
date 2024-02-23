@@ -925,7 +925,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-02-23 14:59:51" itemprop="dateModified" datetime="2024-02-23T14:59:51+08:00">2024-02-23</time>
+      <time title="Modified: 2024-02-23 17:06:33" itemprop="dateModified" datetime="2024-02-23T17:06:33+08:00">2024-02-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -977,15 +977,20 @@
 <h3 id="4-3、部署到GitHub-pages"><a href="#4-3、部署到GitHub-pages" class="headerlink" title="4.3、部署到GitHub pages"></a>4.3、部署到GitHub pages</h3><h4 id="4-3-1、添加公钥"><a href="#4-3-1、添加公钥" class="headerlink" title="4.3.1、添加公钥"></a>4.3.1、添加公钥</h4><p>将catcat的公钥(catcat.pub中的)添加到第二个GitHub的ssh key中</p>
 <h4 id="4-3-2、设置配置文件"><a href="#4-3-2、设置配置文件" class="headerlink" title="4.3.2、设置配置文件"></a>4.3.2、设置配置文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/Blog/catcat$ vim _config.yml</span><br></pre></td></tr></table></figure>
 <h4 id="4-3-3、发布"><a href="#4-3-3、发布" class="headerlink" title="4.3.3、发布"></a>4.3.3、发布</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/Blog/catcat$ hexo clean</span><br><span class="line">owner@Owners-MacBook-Pro:~/Blog/catcat$ hexo g -d</span><br></pre></td></tr></table></figure>
-<h2 id="5、补充"><a href="#5、补充" class="headerlink" title="5、补充"></a>5、补充</h2><p>如果之前有设置全局用户名和邮箱的话，需要unset一下</p>
+<h2 id="5、重要说明"><a href="#5、重要说明" class="headerlink" title="5、重要说明"></a>5、重要说明</h2><blockquote>
+<p>当有多个账户，特别是之前设置了全局用户名和邮箱的情况下，需要unset一下。当某一个仓库没有设置自己的user.name和user.email时，使用的就是全局信息。相反，当仓库下的config有设置单独的user.name和user.email时，则使用当前信息。如果没有注意全局用户名和邮箱这个问题的话，很有可能“系统”根据全局的用户名和邮箱信息更新提交者信息，这样在我们的目标仓库中就会出现全局用户的贡献者记录，这是我们不愿意看到的。（如果全局邮箱是假的，则只会显示全局用户名称，点击名字后，并不会跳转到该用户的github下，这部分知识主要参考了参考链接5和6）</p>
+</blockquote>
+<p>unset全局信息</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-<p>然后在不同的仓库下设置局部的用户名和邮箱<br>比如在公司的repository下</p>
+<p>也可以不取消git的全局用户名和邮箱。只需要在另一个博客（不同的仓库下，比如在公司的repository下）的git目录下设置局部的用户名和邮箱即可。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">&quot;yourname&quot;</span> </span><br><span class="line">git config user.email <span class="string">&quot;youremail&quot;</span> </span><br></pre></td></tr></table></figure>
 <p>在自己的github的仓库再执行刚刚的命令一遍即可,这样就可以在不同的仓库，以不同的账号登录。</p>
 <h2 id="6、参考链接"><a href="#6、参考链接" class="headerlink" title="6、参考链接"></a>6、参考链接</h2><p>1、<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/0ee8b976ceab">多个github帐号更新多个hexo博客</a></p>
 <p>2、<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/69218641">一台电脑部署两个或多个Hexo博客（一台电脑使用两个或多个 GitHub 账号）</a></p>
 <p>3、<a target="_blank" rel="noopener" href="https://blog.csdn.net/inthat/article/details/132116332">Git 用户名邮箱的全局配置和单仓库配置(不同项目使用不同账号登录)</a></p>
 <p>4、<a target="_blank" rel="noopener" href="https://www.zsythink.net/archives/2407">了解ssh代理：ssh-agent</a></p>
+<p>5、<a target="_blank" rel="noopener" href="https://blog.csdn.net/zc19981224/article/details/131031202">多个ssh连接github</a></p>
+<p>6、<a target="_blank" rel="noopener" href="https://blog.csdn.net/u011609120/article/details/104070897">一台电脑配置多个SSH KEY，多个用户身份提交代码</a></p>
 
       
     </div>
