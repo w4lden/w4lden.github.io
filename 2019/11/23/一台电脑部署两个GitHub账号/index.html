@@ -27,7 +27,7 @@
 <meta property="og:description" content="如果有多个密钥，则需要在 ~&#x2F;.ssh&#x2F;config 中进行配置，一般来说 ssh agent 程序可以根据配置自动加载并管理这些密钥；但如果发现某个密钥 没有加载则也可以手动使用 ssh-add 命令将某个私钥交给 ssh-agent 保管。  1、生成第二个ssh key1owner@Owners-MacBook-Pro:~&#x2F;.ssh$ ssh-keygen -t rsa">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-11-23T07:23:25.000Z">
-<meta property="article:modified_time" content="2024-02-23T06:29:16.666Z">
+<meta property="article:modified_time" content="2024-02-23T06:59:51.961Z">
 <meta property="article:author" content="w4lden">
 <meta property="article:tag" content="GitHub Pages">
 <meta name="twitter:card" content="summary">
@@ -236,7 +236,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-02-23 14:29:16" itemprop="dateModified" datetime="2024-02-23T14:29:16+08:00">2024-02-23</time>
+      <time title="Modified: 2024-02-23 14:59:51" itemprop="dateModified" datetime="2024-02-23T14:59:51+08:00">2024-02-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -261,19 +261,19 @@
 <p>如果有多个密钥，则需要在 ~&#x2F;.ssh&#x2F;config 中进行配置，一般来说 ssh agent 程序可以根据配置自动加载并管理这些密钥；但如果发现某个密钥 没有加载则也可以手动使用 ssh-add 命令将某个私钥交给 ssh-agent 保管。</p>
 </blockquote>
 <h2 id="1、生成第二个ssh-key"><a href="#1、生成第二个ssh-key" class="headerlink" title="1、生成第二个ssh key"></a>1、生成第二个ssh key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-keygen -t rsa -C <span class="string">&quot;catcat@gmail.com&quot;</span></span><br></pre></td></tr></table></figure>
-<h2 id="2、打开ssh-agent-添加私钥"><a href="#2、打开ssh-agent-添加私钥" class="headerlink" title="2、打开ssh-agent,添加私钥"></a>2、打开ssh-agent,添加私钥</h2><p>当使用ssh时，系统默认只会读取 ～&#x2F;.ssh&#x2F;id_rsa 文件，不同名称的密钥不会读取，只需要将其他名称的密钥文件加入到ssh读取列表即可正常使用多个密钥文件。<br>添加不同的ssh认证信息（本地使用不同的GitHub账号，需要不同的 SSH 认证登录）：</p>
+<h2 id="2、打开ssh-agent-添加私钥"><a href="#2、打开ssh-agent-添加私钥" class="headerlink" title="2、打开ssh-agent,添加私钥"></a>2、打开ssh-agent,添加私钥</h2><p>当使用ssh时，系统默认只会读取 ～&#x2F;.ssh&#x2F;id_rsa 文件，其他名称的密钥不会读取，只需要将其他名称的密钥文件加入到ssh读取列表即可正常使用多个密钥文件。<br>添加不同的ssh认证信息（本地使用不同的GitHub账号，需要不同的 SSH 认证登录）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-agent -s</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_catcat</span><br></pre></td></tr></table></figure>
 <p>查看添加后的认证信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -l</span><br><span class="line">3072 SHA256:PxvHneilxxx xxx@outlook.com (RSA)</span><br><span class="line">3073 SHA256:PxvHneilyyy yyy@outlook.com (RSA)</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -L</span><br><span class="line">ssh-rsa AAAAB3Nzxxx xxx@outlook.com</span><br><span class="line">ssh-rsa AAAAB3Nzyyy yyy@outlook.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -l</span><br><span class="line">3072 SHA256:PxvHneilxxx xxx@outlook.com (RSA)</span><br><span class="line">3073 SHA256:PxvHneilcatcat catcat@outlook.com (RSA)</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -L</span><br><span class="line">ssh-rsa AAAAB3Nxxx xxx@outlook.com</span><br><span class="line">ssh-rsa AAAAB3Ncatcat catcat@outlook.com</span><br></pre></td></tr></table></figure>
 <p>如果之后个人blog用hexo d提交代码时出现如下错误</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Permission to yyy.git denied to xxx(username)</span><br></pre></td></tr></table></figure>
-<p>是因为ssh使用了默认的认证信息（xxx）提交（ssh-add -l后有多个认证信息），而不是我们的第二个账号的认证信息（yyy），解决办法:新启一个ssh-agent并添加第二个账号的认证信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Permission to catcat.git denied to xxx(username)</span><br></pre></td></tr></table></figure>
+<p>是因为ssh使用了默认的认证信息（<del>&#x2F;.ssh&#x2F;id_rsa）提交（ssh-add -l后有多个认证信息），而不是我们的第二个账号的认证信息（</del>&#x2F;.ssh&#x2F;id_rsa_catcat），解决办法:新启一个ssh-agent并添加第二个账号的认证信息</p>
 <blockquote>
 <p>eval $(ssh-agent -s)后使用ssh-add添加的认证信息是临时的，只在当前shell有效，而ssh-agent -s后使用ssh-add添加的认证信息是永久的，新打开一个shell也有效。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ <span class="built_in">eval</span> $(ssh-agent)</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_yyy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ <span class="built_in">eval</span> $(ssh-agent)</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add ~/.ssh/id_rsa_catcat</span><br></pre></td></tr></table></figure>
 <p>查看添加后的认证信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -l</span><br><span class="line">3073 SHA256:PxvHneilyyy yyy@outlook.com (RSA)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ ssh-add -l</span><br><span class="line">3073 SHA256:PxvHneilcatcat catcat@outlook.com (RSA)</span><br></pre></td></tr></table></figure>
 <p>在当前shell中 hexo d提交</p>
 <h2 id="3、创建并修改config文件"><a href="#3、创建并修改config文件" class="headerlink" title="3、创建并修改config文件"></a>3、创建并修改config文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ <span class="built_in">touch</span> config</span><br><span class="line">owner@Owners-MacBook-Pro:~/.ssh$ vim config</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
@@ -284,7 +284,7 @@
 <h3 id="4-2、启动本地服务"><a href="#4-2、启动本地服务" class="headerlink" title="4.2、启动本地服务"></a>4.2、启动本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/Blog/catcat$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
 <p>假装是一张图.jpg</p>
-<h3 id="4-3、部署到GitHub-pages"><a href="#4-3、部署到GitHub-pages" class="headerlink" title="4.3、部署到GitHub pages"></a>4.3、部署到GitHub pages</h3><h4 id="4-3-1、添加公钥"><a href="#4-3-1、添加公钥" class="headerlink" title="4.3.1、添加公钥"></a>4.3.1、添加公钥</h4><p>将catcat的公钥(yyy.pub中的)添加到第二个GitHub的ssh key中</p>
+<h3 id="4-3、部署到GitHub-pages"><a href="#4-3、部署到GitHub-pages" class="headerlink" title="4.3、部署到GitHub pages"></a>4.3、部署到GitHub pages</h3><h4 id="4-3-1、添加公钥"><a href="#4-3-1、添加公钥" class="headerlink" title="4.3.1、添加公钥"></a>4.3.1、添加公钥</h4><p>将catcat的公钥(catcat.pub中的)添加到第二个GitHub的ssh key中</p>
 <h4 id="4-3-2、设置配置文件"><a href="#4-3-2、设置配置文件" class="headerlink" title="4.3.2、设置配置文件"></a>4.3.2、设置配置文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/Blog/catcat$ vim _config.yml</span><br></pre></td></tr></table></figure>
 <h4 id="4-3-3、发布"><a href="#4-3-3、发布" class="headerlink" title="4.3.3、发布"></a>4.3.3、发布</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@Owners-MacBook-Pro:~/Blog/catcat$ hexo clean</span><br><span class="line">owner@Owners-MacBook-Pro:~/Blog/catcat$ hexo g -d</span><br></pre></td></tr></table></figure>
 <h2 id="5、补充"><a href="#5、补充" class="headerlink" title="5、补充"></a>5、补充</h2><p>如果之前有设置全局用户名和邮箱的话，需要unset一下</p>
@@ -295,6 +295,7 @@
 <h2 id="6、参考链接"><a href="#6、参考链接" class="headerlink" title="6、参考链接"></a>6、参考链接</h2><p>1、<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/0ee8b976ceab">多个github帐号更新多个hexo博客</a></p>
 <p>2、<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/69218641">一台电脑部署两个或多个Hexo博客（一台电脑使用两个或多个 GitHub 账号）</a></p>
 <p>3、<a target="_blank" rel="noopener" href="https://blog.csdn.net/inthat/article/details/132116332">Git 用户名邮箱的全局配置和单仓库配置(不同项目使用不同账号登录)</a></p>
+<p>4、<a target="_blank" rel="noopener" href="https://www.zsythink.net/archives/2407">了解ssh代理：ssh-agent</a></p>
 
     </div>
 
