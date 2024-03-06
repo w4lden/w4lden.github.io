@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">39</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">40</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -186,6 +186,95 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="w4lden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="walden">
+      <meta itemprop="description" content="description">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | walden">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/04/phpMyAdmin%E8%BF%9E%E6%8E%A5MySQL8-0%E6%8A%A5%E9%94%992054/" class="post-title-link" itemprop="url">phpMyAdmin连接MySQL8.0报错2054</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-04 23:26:01" itemprop="dateCreated datePublished" datetime="2020-03-04T23:26:01+08:00">2020-03-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-02-20 22:07:42" itemprop="dateModified" datetime="2024-02-20T22:07:42+08:00">2024-02-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="1、报错场景"><a href="#1、报错场景" class="headerlink" title="1、报错场景"></a>1、报错场景</h3><p>在正确输入了MySQL用户名和密码后，phpMyAdmin连接MySQL8.0报错2054，无法登录MySQL服务器</p>
+<h3 id="2、报错原因"><a href="#2、报错原因" class="headerlink" title="2、报错原因"></a>2、报错原因</h3><p>由于mysql8.0默认使用了新的密码验证插件<font color=red size=4>caching_sha2_password</font>，而之前的PHP版本中所带的mysqlnd不能支持新的验证方式。</p>
+<h3 id="3、解决方法"><a href="#3、解决方法" class="headerlink" title="3、解决方法"></a>3、解决方法</h3><p>删除创建的用户和授权</p>
+<h4 id="3-1、查看当前的密码验证方式"><a href="#3-1、查看当前的密码验证方式" class="headerlink" title="3.1、查看当前的密码验证方式"></a>3.1、查看当前的密码验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; <span class="keyword">select</span> User,plugin from user <span class="built_in">where</span> User = <span class="string">&#x27;root&#x27;</span>;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| User | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | caching_sha2_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.01 sec)</span><br></pre></td></tr></table></figure>
+<h4 id="3-2、修改验证方式"><a href="#3-2、修改验证方式" class="headerlink" title="3.2、修改验证方式"></a>3.2、修改验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line">use mysql;</span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;你的密码&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="3-3、查看当前的密码验证方式"><a href="#3-3、查看当前的密码验证方式" class="headerlink" title="3.3、查看当前的密码验证方式"></a>3.3、查看当前的密码验证方式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; <span class="keyword">select</span> User,plugin from user <span class="built_in">where</span> User = <span class="string">&#x27;root&#x27;</span>;</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| User | plugin                |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">| root | mysql_native_password |</span><br><span class="line">+------+-----------------------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -957,100 +1046,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/49328078">https://www.zhihu.com/question/49328078</a><br><a target="_blank" rel="noopener" href="https://juejin.im/post/5bd6af7451882526254942d5#heading-3">https://juejin.im/post/5bd6af7451882526254942d5#heading-3</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="w4lden">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="walden">
-      <meta itemprop="description" content="description">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | walden">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/12/11/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89/" class="post-title-link" itemprop="url">汇编指令含义</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-12-11 16:44:08" itemprop="dateCreated datePublished" datetime="2019-12-11T16:44:08+08:00">2019-12-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-02-20 22:07:42" itemprop="dateModified" datetime="2024-02-20T22:07:42+08:00">2024-02-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/asm/" itemprop="url" rel="index"><span itemprop="name">asm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>CMP OPR1，OPR2<br>OPR1OPR2运算，影响PF和ZF(OPR1&#x3D;OPR2，ZF&#x3D;1，PF&#x3D;1;!&#x3D;,ZF&#x3D;0,PF&#x3D;0)</p>
-<p>LEA OPR1，OPR2<br>将OPR2的地址赋给OPR1</p>
-<p>AND OPR1，OPR2<br>OPR1，OPR2与运算为0时，ZF标志位为1；与运算为1是，ZF为0。</p>
-<p>IMUL OPR1，OPR2，OPR3<br>将OPR2*OPR3赋给OPR1。</p>
-<p>jge opr1,opr2	两数比较，前者大于等于后者则跳。jump if greater or eaual.</p>
-<p>rep stos dword ptr es:[edi]	rep重复操作前缀 stos从累加器EAX传送4个字节，到由EDI作为指针的目的串中，同时修改EDI以指向 串中的下一个单元。利用重复操作可以在串在建立一串相同的值。此指令对标志位无影响。</p>
-<p>rep 为repeat 重复之意<br>stos 为sotre string 保存字符串之意<br>ptr 为pointer 指针之意</p>
-<p>在一个函数中，它所申请的栈存放局部变量，在执行函数体运算的时候，将局部变量赋给寄存器（如eax），eax参加运算。结果保留在栈中</p>
-<p>ebp-8处存放 int i；<br>i+1；</p>
-<p>00411577 8b45f8          mov     eax,dword ptr [ebp-8]<br>0041157a 83c001          add     eax,1<br>0041157d 8945f8          mov     dword ptr [ebp-8],eax</p>
 
       
     </div>
