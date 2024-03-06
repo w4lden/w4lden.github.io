@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1、执行命令12source build&#x2F;envsetup.shmmm development&#x2F;tools&#x2F;idegen&#x2F; 出错 1ninja: error: &#x27;out&#x2F;host&#x2F;common&#x2F;obj&#x2F;JAVA_LIBRARIES&#x2F;guavalib_intermediates&#x2F;classes.jar&#x27;, needed by &#x27;out&#x2F;host&#x2F;common&#x2F;obj&#x2F;J">
+    <meta name="description" content="1、执行命令将jar添加到系统命令 12owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;jar jar $(pwd)&#x2F;prebuilts&#x2F;jdk&#x2F;jdk8&#x2F;linux-x86&#x2F;bin&#x2F;jar 1owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternati">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编译android.ipr">
 <meta property="og:url" content="http://example.com/2024/03/06/%E7%BC%96%E8%AF%91android-ipr/index.html">
 <meta property="og:site_name" content="walden">
-<meta property="og:description" content="1、执行命令12source build&#x2F;envsetup.shmmm development&#x2F;tools&#x2F;idegen&#x2F; 出错 1ninja: error: &#x27;out&#x2F;host&#x2F;common&#x2F;obj&#x2F;JAVA_LIBRARIES&#x2F;guavalib_intermediates&#x2F;classes.jar&#x27;, needed by &#x27;out&#x2F;host&#x2F;common&#x2F;obj&#x2F;J">
+<meta property="og:description" content="1、执行命令将jar添加到系统命令 12owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;jar jar $(pwd)&#x2F;prebuilts&#x2F;jdk&#x2F;jdk8&#x2F;linux-x86&#x2F;bin&#x2F;jar 1owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternati">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-06T09:42:29.000Z">
-<meta property="article:modified_time" content="2024-03-06T09:58:02.133Z">
+<meta property="article:modified_time" content="2024-03-06T10:09:53.543Z">
 <meta property="article:author" content="w4lden">
 <meta property="article:tag" content="aosp">
 <meta property="article:tag" content="Android">
@@ -92,7 +92,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">40</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">40</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="nav-text">1、执行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">2、解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E6%89%93%E5%BC%80studio-%E9%80%89%E6%8B%A9-ipr-%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%B3%E5%8F%AF"><span class="nav-text">3、打开studio 选择 .ipr 文件导入即可</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%8F%82%E8%80%83"><span class="nav-text">4、参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="nav-text">1、执行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">2、解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%80%92%E5%85%A5"><span class="nav-text">3、倒入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%8F%82%E8%80%83"><span class="nav-text">4、参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,7 +164,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -231,7 +231,16 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-06 17:42:29 / Modified: 17:58:02" itemprop="dateCreated datePublished" datetime="2024-03-06T17:42:29+08:00">2024-03-06</time>
+      <time title="Created: 2024-03-06 17:42:29 / Modified: 18:09:53" itemprop="dateCreated datePublished" datetime="2024-03-06T17:42:29+08:00">2024-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/source-code-compilation/" itemprop="url" rel="index"><span itemprop="name">source code compilation</span></a>
+        </span>
     </span>
 
   
@@ -243,17 +252,22 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="1、执行命令"><a href="#1、执行命令" class="headerlink" title="1、执行命令"></a>1、执行命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h2 id="1、执行命令"><a href="#1、执行命令" class="headerlink" title="1、执行命令"></a>1、执行命令</h2><p>将jar添加到系统命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ sudo update-alternatives --install /usr/bin/jar jar $(<span class="built_in">pwd</span>)/prebuilts/jdk/jdk8/linux-x86/bin/jar 1</span><br><span class="line">owner@ubuntu2004:~/srcAndroid$ sudo update-alternatives --<span class="built_in">set</span> jar $(<span class="built_in">pwd</span>)/prebuilts/jdk/jdk8/linux-x86/bin/jar</span><br></pre></td></tr></table></figure>
+<p>开始编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ <span class="built_in">source</span> build/envsetup.sh </span><br><span class="line">owner@ubuntu2004:~/srcAndroid$ mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
 <p>出错</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ninja: error: <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/guavalib_intermediates/classes.jar&#x27;</span>, needed by <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/idegen_intermediates/classes-full-debug.jar&#x27;</span>, missing and no known rule to make it</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ninja: error: <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/guavalib_intermediates/classes.jar&#x27;</span>, needed by <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/idegen_intermediates/classes-full-debug.jar&#x27;</span>, missing and no known rule to make it</span><br><span class="line">16:35:51 ninja failed with: <span class="built_in">exit</span> status 1</span><br><span class="line"></span><br><span class="line"><span class="comment">#### failed to build some targets (36 seconds) ####</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="2、解决办法"><a href="#2、解决办法" class="headerlink" title="2、解决办法"></a>2、解决办法</h2><p>在源码根目录执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make idegen</span><br></pre></td></tr></table></figure>
-<p>可以看到，在out&#x2F;host&#x2F;linux- x86&#x2F;framework目录下生成一个idegen.jar文件。</p>
-<p>接着执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">development/tools/idegen/idegen.sh</span><br></pre></td></tr></table></figure>
-<p>在项目的根目录就会生成.ipr .iml 文件了</p>
-<h2 id="3、打开studio-选择-ipr-文件导入即可"><a href="#3、打开studio-选择-ipr-文件导入即可" class="headerlink" title="3、打开studio 选择 .ipr 文件导入即可"></a>3、打开studio 选择 .ipr 文件导入即可</h2><p>studio会执行scan file to index 任务，任务结束就OK了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ make idegen</span><br><span class="line">...</span><br><span class="line">[100% 15/15] Install: out/host/linux-x86/framework/idegen.jar</span><br></pre></td></tr></table></figure>
+<p>可以看到，在out&#x2F;host&#x2F;linux-x86&#x2F;framework目录下生成一个idegen.jar文件。</p>
+<p>接着在源码根目录执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ development/tools/idegen/idegen.sh </span><br></pre></td></tr></table></figure>
+<p>在源码的根目录就会生成android.ipr和android.iml 文件了</p>
+<h2 id="3、倒入"><a href="#3、倒入" class="headerlink" title="3、倒入"></a>3、倒入</h2><p>打开android studio,选择android.ipr文件导入即可。</p>
+<p>android studio会执行scan file to index 任务，任务结束就OK了</p>
 <h2 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9450806f38b">Android8.1 源码编译.ipr .iml 文件</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/af9e6aa0fb1f">Android8.1 源码编译.ipr .iml 文件-转改</a></p>
 
     </div>
 
