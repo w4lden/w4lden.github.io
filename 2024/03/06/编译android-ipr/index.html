@@ -27,7 +27,7 @@
 <meta property="og:description" content="1、执行命令将jar添加到系统命令 12owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;jar jar $(pwd)&#x2F;prebuilts&#x2F;jdk&#x2F;jdk8&#x2F;linux-x86&#x2F;bin&#x2F;jar 1owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternati">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-06T09:42:29.000Z">
-<meta property="article:modified_time" content="2024-03-06T10:09:53.543Z">
+<meta property="article:modified_time" content="2024-03-06T10:16:07.891Z">
 <meta property="article:author" content="w4lden">
 <meta property="article:tag" content="aosp">
 <meta property="article:tag" content="Android">
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="nav-text">1、执行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">2、解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%80%92%E5%85%A5"><span class="nav-text">3、倒入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%8F%82%E8%80%83"><span class="nav-text">4、参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="nav-text">1、执行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">2、解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%AF%BC%E5%85%A5"><span class="nav-text">3、导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%8F%82%E8%80%83"><span class="nav-text">4、参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -231,7 +231,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-06 17:42:29 / Modified: 18:09:53" itemprop="dateCreated datePublished" datetime="2024-03-06T17:42:29+08:00">2024-03-06</time>
+      <time title="Created: 2024-03-06 17:42:29 / Modified: 18:16:07" itemprop="dateCreated datePublished" datetime="2024-03-06T17:42:29+08:00">2024-03-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -257,14 +257,14 @@
 <p>开始编译</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ <span class="built_in">source</span> build/envsetup.sh </span><br><span class="line">owner@ubuntu2004:~/srcAndroid$ mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
 <p>出错</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ninja: error: <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/guavalib_intermediates/classes.jar&#x27;</span>, needed by <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/idegen_intermediates/classes-full-debug.jar&#x27;</span>, missing and no known rule to make it</span><br><span class="line">16:35:51 ninja failed with: <span class="built_in">exit</span> status 1</span><br><span class="line"></span><br><span class="line"><span class="comment">#### failed to build some targets (36 seconds) ####</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ninja: error: <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/guavalib_intermediates/classes.jar&#x27;</span>, needed by <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/idegen_intermediates/classes-full-debug.jar&#x27;</span>, missing and no known rule to make it</span><br><span class="line">16:35:51 ninja failed with: <span class="built_in">exit</span> status 1</span><br><span class="line"></span><br><span class="line"><span class="comment">#### failed to build some targets (36 seconds) ####</span></span><br></pre></td></tr></table></figure>
 <h2 id="2、解决办法"><a href="#2、解决办法" class="headerlink" title="2、解决办法"></a>2、解决办法</h2><p>在源码根目录执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ make idegen</span><br><span class="line">...</span><br><span class="line">[100% 15/15] Install: out/host/linux-x86/framework/idegen.jar</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ make idegen</span><br><span class="line">...</span><br><span class="line">[100% 15/15] Install: out/host/linux-x86/framework/idegen.jar</span><br><span class="line"></span><br><span class="line"><span class="comment">#### build completed successfully (52 seconds) ####</span></span><br></pre></td></tr></table></figure>
 <p>可以看到，在out&#x2F;host&#x2F;linux-x86&#x2F;framework目录下生成一个idegen.jar文件。</p>
 <p>接着在源码根目录执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ development/tools/idegen/idegen.sh </span><br></pre></td></tr></table></figure>
 <p>在源码的根目录就会生成android.ipr和android.iml 文件了</p>
-<h2 id="3、倒入"><a href="#3、倒入" class="headerlink" title="3、倒入"></a>3、倒入</h2><p>打开android studio,选择android.ipr文件导入即可。</p>
+<h2 id="3、导入"><a href="#3、导入" class="headerlink" title="3、导入"></a>3、导入</h2><p>打开android studio,选择android.ipr文件导入即可。</p>
 <p>android studio会执行scan file to index 任务，任务结束就OK了</p>
 <h2 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9450806f38b">Android8.1 源码编译.ipr .iml 文件</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/af9e6aa0fb1f">Android8.1 源码编译.ipr .iml 文件-转改</a></p>
