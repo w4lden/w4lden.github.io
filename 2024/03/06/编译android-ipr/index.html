@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1、执行命令将jar添加到系统命令 12owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;jar jar $(pwd)&#x2F;prebuilts&#x2F;jdk&#x2F;jdk8&#x2F;linux-x86&#x2F;bin&#x2F;jar 1owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternati">
+    <meta name="description" content="在导入源码之前，记得一定要正确都通过全部源码的编译。本文是在未编译android源码的情况下操作的。 1、执行命令将jar添加到系统命令 12owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;jar jar $(pwd)&#x2F;prebuilts&#x2F;jdk&#x2F;jdk8&#x2F;linux-x86&#x2F;bin&#x2F;jar 1o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编译android.ipr">
 <meta property="og:url" content="http://example.com/2024/03/06/%E7%BC%96%E8%AF%91android-ipr/index.html">
 <meta property="og:site_name" content="walden">
-<meta property="og:description" content="1、执行命令将jar添加到系统命令 12owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;jar jar $(pwd)&#x2F;prebuilts&#x2F;jdk&#x2F;jdk8&#x2F;linux-x86&#x2F;bin&#x2F;jar 1owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternati">
+<meta property="og:description" content="在导入源码之前，记得一定要正确都通过全部源码的编译。本文是在未编译android源码的情况下操作的。 1、执行命令将jar添加到系统命令 12owner@ubuntu2004:~&#x2F;srcAndroid$ sudo update-alternatives --install &#x2F;usr&#x2F;bin&#x2F;jar jar $(pwd)&#x2F;prebuilts&#x2F;jdk&#x2F;jdk8&#x2F;linux-x86&#x2F;bin&#x2F;jar 1o">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-06T09:42:29.000Z">
-<meta property="article:modified_time" content="2024-03-06T10:16:07.891Z">
+<meta property="article:modified_time" content="2024-03-07T01:46:12.015Z">
 <meta property="article:author" content="w4lden">
 <meta property="article:tag" content="aosp">
 <meta property="article:tag" content="Android">
@@ -229,9 +229,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-03-06 17:42:29 / Modified: 18:16:07" itemprop="dateCreated datePublished" datetime="2024-03-06T17:42:29+08:00">2024-03-06</time>
+      <time title="Created: 2024-03-06 17:42:29" itemprop="dateCreated datePublished" datetime="2024-03-06T17:42:29+08:00">2024-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-07 09:46:12" itemprop="dateModified" datetime="2024-03-07T09:46:12+08:00">2024-03-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -252,12 +258,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="1、执行命令"><a href="#1、执行命令" class="headerlink" title="1、执行命令"></a>1、执行命令</h2><p>将jar添加到系统命令</p>
+    <div class="post-body" itemprop="articleBody"><p>在导入源码之前，记得一定要正确都通过全部源码的编译。本文是在未编译android源码的情况下操作的。</p>
+<h2 id="1、执行命令"><a href="#1、执行命令" class="headerlink" title="1、执行命令"></a>1、执行命令</h2><p>将jar添加到系统命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ sudo update-alternatives --install /usr/bin/jar jar $(<span class="built_in">pwd</span>)/prebuilts/jdk/jdk8/linux-x86/bin/jar 1</span><br><span class="line">owner@ubuntu2004:~/srcAndroid$ sudo update-alternatives --<span class="built_in">set</span> jar $(<span class="built_in">pwd</span>)/prebuilts/jdk/jdk8/linux-x86/bin/jar</span><br></pre></td></tr></table></figure>
 <p>开始编译</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ <span class="built_in">source</span> build/envsetup.sh </span><br><span class="line">owner@ubuntu2004:~/srcAndroid$ mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
 <p>出错</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ninja: error: <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/guavalib_intermediates/classes.jar&#x27;</span>, needed by <span class="string">&#x27;out/host/common/obj/JAVA_LIBRARIES/idegen_intermediates/classes-full-debug.jar&#x27;</span>, missing and no known rule to make it</span><br><span class="line">16:35:51 ninja failed with: <span class="built_in">exit</span> status 1</span><br><span class="line"></span><br><span class="line"><span class="comment">#### failed to build some targets (36 seconds) ####</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果在编译完android源码后，再如上操作，则不会出错，会正常编译出idegen.jar文件。</p>
+</blockquote>
 <h2 id="2、解决办法"><a href="#2、解决办法" class="headerlink" title="2、解决办法"></a>2、解决办法</h2><p>在源码根目录执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu2004:~/srcAndroid$ make idegen</span><br><span class="line">...</span><br><span class="line">[100% 15/15] Install: out/host/linux-x86/framework/idegen.jar</span><br><span class="line"></span><br><span class="line"><span class="comment">#### build completed successfully (52 seconds) ####</span></span><br></pre></td></tr></table></figure>
 <p>可以看到，在out&#x2F;host&#x2F;linux-x86&#x2F;framework目录下生成一个idegen.jar文件。</p>
