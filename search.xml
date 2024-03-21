@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vs2008去除编译路径pdb</title>
+      <link href="/2024/03/21/vs2008%E5%8E%BB%E9%99%A4%E7%BC%96%E8%AF%91%E8%B7%AF%E5%BE%84pdb/"/>
+      <url>/2024/03/21/vs2008%E5%8E%BB%E9%99%A4%E7%BC%96%E8%AF%91%E8%B7%AF%E5%BE%84pdb/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、问题"><a href="#1、问题" class="headerlink" title="1、问题"></a>1、问题</h2><p>编译的项目中会出现程序的路径.pdb的字符串。</p><h2 id="2、解决"><a href="#2、解决" class="headerlink" title="2、解决"></a>2、解决</h2><p>项目属性-&gt;Configuration Properties-&gt;Linker-&gt;Debugging<br>Generate Debug Info设置为No，即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> configuration </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vs2008 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编译android.ipr</title>
       <link href="/2024/03/06/%E7%BC%96%E8%AF%91android-ipr/"/>
       <url>/2024/03/06/%E7%BC%96%E8%AF%91android-ipr/</url>
