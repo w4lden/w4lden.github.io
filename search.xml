@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux中格式化磁盘</title>
+      <link href="/2024/04/15/Linux%E4%B8%AD%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%A3%81%E7%9B%98/"/>
+      <url>/2024/04/15/Linux%E4%B8%AD%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%A3%81%E7%9B%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、查找磁盘设备"><a href="#1、查找磁盘设备" class="headerlink" title="1、查找磁盘设备"></a>1、查找磁盘设备</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ lsblk</span><br><span class="line">NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS</span><br><span class="line">sda      8:0    0  80.1G  0 disk </span><br><span class="line">└─sda1   8:1    0  80.1G  0 part /</span><br><span class="line">sdb      8:16   0 465.7G  0 disk </span><br><span class="line">└─sdb1   8:17   0 465.7G  0 part </span><br><span class="line">sr0     11:0    1  1024M  0 rom  </span><br></pre></td></tr></table></figure><h3 id="2、使用nkfs格式化磁盘"><a href="#2、使用nkfs格式化磁盘" class="headerlink" title="2、使用nkfs格式化磁盘"></a>2、使用nkfs格式化磁盘</h3><p>格式化为ntfs系统</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo mkfs.ntfs /dev/sdb1</span><br><span class="line">Cluster size has been automatically <span class="built_in">set</span> to 4096 bytes.</span><br><span class="line">Initializing device with zeroes: 100% - Done.</span><br><span class="line">Creating NTFS volume structures.                                                                                                                                                                                                            </span><br><span class="line">mkntfs completed successfully. Have a <span class="built_in">nice</span> day. </span><br></pre></td></tr></table></figure><p>格式化为ext4文件系统</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkfs.ext4 /dev/磁盘设备名称</span><br></pre></td></tr></table></figure><h3 id="3、参考"><a href="#3、参考" class="headerlink" title="3、参考"></a>3、参考</h3><p><a href="https://www.quanxiaoha.com/linux-command/linux-format-disk.html">Linux 格式化磁盘（超详细）</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ntfs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vs2008去除编译路径pdb</title>
       <link href="/2024/03/21/vs2008%E5%8E%BB%E9%99%A4%E7%BC%96%E8%AF%91%E8%B7%AF%E5%BE%84pdb/"/>
       <url>/2024/03/21/vs2008%E5%8E%BB%E9%99%A4%E7%BC%96%E8%AF%91%E8%B7%AF%E5%BE%84pdb/</url>
