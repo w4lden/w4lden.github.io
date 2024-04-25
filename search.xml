@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>利用DNSQuery进行DNS查询</title>
+      <link href="/2024/04/25/%E5%88%A9%E7%94%A8DNSQuery%E8%BF%9B%E8%A1%8CDNS%E6%9F%A5%E8%AF%A2/"/>
+      <url>/2024/04/25/%E5%88%A9%E7%94%A8DNSQuery%E8%BF%9B%E8%A1%8CDNS%E6%9F%A5%E8%AF%A2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、代码"><a href="#1、代码" class="headerlink" title="1、代码"></a>1、代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;WinSock2.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;WinDNS.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> comment (lib, <span class="string">&quot;Dnsapi.lib&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> comment (lib, <span class="string">&quot;ws2_32.lib&quot;</span>)</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> _tmain(<span class="type">int</span> argc, _TCHAR* argv[])</span><br><span class="line">&#123;</span><br><span class="line">    PDNS_RECORD pResult = <span class="literal">NULL</span>;</span><br><span class="line">    DNS_STATUS dnsStatus = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//DNS_QUERY_STANDARD 会首从缓存中查询，如果没有查到才发起dns查询，</span></span><br><span class="line">    dnsStatus = DnsQuery_A(<span class="string">&quot;www.baidu.com&quot;</span>, DNS_TYPE_A, DNS_QUERY_BYPASS_CACHE<span class="comment">/*DNS_QUERY_STANDARD*/</span>, <span class="literal">NULL</span>, &amp;pResult, <span class="literal">NULL</span>);</span><br><span class="line">    PDNS_RECORD temp = pResult;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        IN_ADDR ipaddr;</span><br><span class="line">        ipaddr.S_un.S_addr = temp-&gt;Data.A.IpAddress;</span><br><span class="line">        <span class="type">char</span> *pAddr = inet_ntoa(ipaddr);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Addr:%s \n&quot;</span>, pAddr);</span><br><span class="line">        temp = temp-&gt;pNext;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    DnsRecordListFree(pResult, DnsFreeRecordListDeep);</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2、参考"><a href="#2、参考" class="headerlink" title="2、参考"></a>2、参考</h3><p><a href="https://www.cnblogs.com/priarieNew/p/9914549.html">利用DNSQuery进行DNS查询</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DNSQuery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux中格式化磁盘</title>
       <link href="/2024/04/15/Linux%E4%B8%AD%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%A3%81%E7%9B%98/"/>
       <url>/2024/04/15/Linux%E4%B8%AD%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%A3%81%E7%9B%98/</url>
