@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">43</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -186,6 +186,88 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/30/ubuntu%E5%8F%B3%E4%B8%8A%E8%A7%92%E4%B8%8D%E6%98%BE%E7%A4%BAibus%EF%BC%88%E5%8D%B3%E8%BE%93%E5%85%A5%E6%B3%95%E5%9B%BE%E6%A0%87%EF%BC%89%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="w4lden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="walden">
+      <meta itemprop="description" content="description">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | walden">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/30/ubuntu%E5%8F%B3%E4%B8%8A%E8%A7%92%E4%B8%8D%E6%98%BE%E7%A4%BAibus%EF%BC%88%E5%8D%B3%E8%BE%93%E5%85%A5%E6%B3%95%E5%9B%BE%E6%A0%87%EF%BC%89%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="post-title-link" itemprop="url">ubuntu右上角不显示ibus（即输入法图标）的解决办法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-04-30 09:52:51 / Modified: 09:56:47" itemprop="dateCreated datePublished" datetime="2024-04-30T09:52:51+08:00">2024-04-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="1、操作"><a href="#1、操作" class="headerlink" title="1、操作"></a>1、操作</h3><p>按Ctrl+Alt+T打开终端，输入以下命令结束ibus并重启即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">killall ibus-daemon</span><br><span class="line">ibus-daemon -d</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、参考"><a href="#2、参考" class="headerlink" title="2、参考"></a>2、参考</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/llxxhm/article/details/82386019">ubuntu右上角不显示ibus（即输入法图标）的解决办法</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1122,114 +1204,6 @@
 <h3 id="3、编译"><a href="#3、编译" class="headerlink" title="3、编译"></a>3、编译</h3><p>正常编译aosp就行</p>
 <h3 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h3><p><a target="_blank" rel="noopener" href="https://www.sunofbeach.net/a/1601128372085383170">https://www.sunofbeach.net/a/1601128372085383170</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011341111/article/details/84312233">https://blog.csdn.net/u011341111/article/details/84312233</a></p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="w4lden">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="walden">
-      <meta itemprop="description" content="description">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | walden">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/10/15/%E7%BC%96%E8%AF%91Android10%E6%BA%90%E7%A0%81/" class="post-title-link" itemprop="url">编译Android10源码</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-10-15 14:23:16" itemprop="dateCreated datePublished" datetime="2020-10-15T14:23:16+08:00">2020-10-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-06 18:09:37" itemprop="dateModified" datetime="2024-03-06T18:09:37+08:00">2024-03-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/source-code-compilation/" itemprop="url" rel="index"><span itemprop="name">source code compilation</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-准备环境"><a href="#1-准备环境" class="headerlink" title="1 准备环境"></a>1 准备环境</h2><h3 id="1-1-下载源码"><a href="#1-1-下载源码" class="headerlink" title="1.1 下载源码"></a>1.1 下载源码</h3><p>安装v2ray设置代理？（export http_proxy&#x3D;<a href="http://127.0.0.1:1089;export">http://127.0.0.1:1089;export</a> https_proxy&#x3D;<a href="http://127.0.0.1:1089;）">http://127.0.0.1:1089;）</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-10.0.0_r2</span><br><span class="line">./down.sh </span><br><span class="line">../repo <span class="built_in">sync</span> --current-branch</span><br></pre></td></tr></table></figure>
-<p>下载完后删除其他文件，节省空间</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf .repo/</span><br></pre></td></tr></table></figure>
-<h3 id="1-2-安装openjdk-1-8"><a href="#1-2-安装openjdk-1-8" class="headerlink" title="1.2 安装openjdk 1.8"></a>1.2 安装openjdk 1.8</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
-<h3 id="1-3-安装其他模块"><a href="#1-3-安装其他模块" class="headerlink" title="1.3 安装其他模块"></a>1.3 安装其他模块</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install m4</span><br></pre></td></tr></table></figure>
-<h3 id="1-4-添加驱动文件"><a href="#1-4-添加驱动文件" class="headerlink" title="1.4 添加驱动文件"></a>1.4 添加驱动文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./extract-qcom-sailfish.sh</span><br><span class="line">./extract-google_devices-sailfish.sh </span><br></pre></td></tr></table></figure>
-<h2 id="2-编译"><a href="#2-编译" class="headerlink" title="2 编译"></a>2 编译</h2><h3 id="2-1-编译命令"><a href="#2-1-编译命令" class="headerlink" title="2.1 编译命令"></a>2.1 编译命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">lunch 16</span><br><span class="line">make -j 8</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-遇到问题"><a href="#2-2-遇到问题" class="headerlink" title="2.2 遇到问题"></a>2.2 遇到问题</h3><h4 id="2-2-1-内存不足"><a href="#2-2-1-内存不足" class="headerlink" title="2.2.1 内存不足"></a>2.2.1 内存不足</h4><p>解决办法：增加Swap分区大小</p>
-<h5 id="2-2-1-1-检查当前分区情况"><a href="#2-2-1-1-检查当前分区情况" class="headerlink" title="2.2.1.1 检查当前分区情况"></a>2.2.1.1 检查当前分区情况</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
-<h5 id="2-2-1-2-增加交换分区文件及大小"><a href="#2-2-1-2-增加交换分区文件及大小" class="headerlink" title="2.2.1.2 增加交换分区文件及大小"></a>2.2.1.2 增加交换分区文件及大小</h5><p>如果要增加8G大小的交换分区，则命令写法如下，其中的 count 等于想要的块大小。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=/home/swap bs=1024 count=8192000</span><br></pre></td></tr></table></figure>
-<h5 id="2-2-1-3-设置交换文件"><a href="#2-2-1-3-设置交换文件" class="headerlink" title="2.2.1.3 设置交换文件"></a>2.2.1.3 设置交换文件</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkswap /home/swap</span><br></pre></td></tr></table></figure>
-<h5 id="2-2-1-4-立即启用交换分区文件"><a href="#2-2-1-4-立即启用交换分区文件" class="headerlink" title="2.2.1.4 立即启用交换分区文件"></a>2.2.1.4 立即启用交换分区文件</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo swapon /home/swap </span><br></pre></td></tr></table></figure>
-<h5 id="2-2-1-5-如果要在引导时自动启用，则编辑-etc-fstab-文件，添加行："><a href="#2-2-1-5-如果要在引导时自动启用，则编辑-etc-fstab-文件，添加行：" class="headerlink" title="2.2.1.5 如果要在引导时自动启用，则编辑 &#x2F;etc&#x2F;fstab 文件，添加行："></a>2.2.1.5 如果要在引导时自动启用，则编辑 &#x2F;etc&#x2F;fstab 文件，添加行：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/swap swap swap defaults 0 0 </span><br></pre></td></tr></table></figure>
-<p>系统下次引导时，它就会启用新建的交换文件，再查看SWAP分区大小发现增加了8G。</p>
-<h2 id="3-刷机"><a href="#3-刷机" class="headerlink" title="3 刷机"></a>3 刷机</h2><h3 id="3-1-刷机命令"><a href="#3-1-刷机命令" class="headerlink" title="3.1 刷机命令"></a>3.1 刷机命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid/out/host/linux-x86/bin$ ./adb reboot bootloader</span><br><span class="line">owner@ubuntu:~/srcAndroid/out/host/linux-x86/bin$ sudo ./fastboot devices</span><br><span class="line">owner@ubuntu:~/srcAndroid/out/host/linux-x86/bin$ sudo ANDROID_PRODUCT_OUT=/home/owner/srcAndroid/out/target/product/sailfish ./fastboot flashall -w</span><br></pre></td></tr></table></figure>
-<h3 id="3-2-遇到问题"><a href="#3-2-遇到问题" class="headerlink" title="3.2 遇到问题"></a>3.2 遇到问题</h3><h4 id="3-2-1-Pixel1连不上VMWare"><a href="#3-2-1-Pixel1连不上VMWare" class="headerlink" title="3.2.1 Pixel1连不上VMWare"></a>3.2.1 Pixel1连不上VMWare</h4><p>解决办法：关闭VMWare虚拟机，将USB连接设置成USB3.1</p>
-<h4 id="3-2-2-adb-报错：no-permissions-user-in-plugdev-group；-are-your-udev-rules-wrong"><a href="#3-2-2-adb-报错：no-permissions-user-in-plugdev-group；-are-your-udev-rules-wrong" class="headerlink" title="3.2.2 adb 报错：no permissions (user in plugdev group； are your udev rules wrong?)"></a>3.2.2 adb 报错：no permissions (user in plugdev group； are your udev rules wrong?)</h4><p>解决办法：</p>
-<h5 id="3-2-2-1-查看自己的android设备"><a href="#3-2-2-1-查看自己的android设备" class="headerlink" title="3.2.2.1 查看自己的android设备"></a>3.2.2.1 查看自己的android设备</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsusb</span><br></pre></td></tr></table></figure>
-<p>找到pixel的idVendor和idProduct（替换下一步设备文件对应的值）</p>
-<h5 id="3-2-2-2-新建设备文件-文件名随便"><a href="#3-2-2-2-新建设备文件-文件名随便" class="headerlink" title="3.2.2.2 新建设备文件(文件名随便)"></a>3.2.2.2 新建设备文件(文件名随便)</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/udev/rules.d/90-android.rules</span><br></pre></td></tr></table></figure>
-<p>内容:<br>SUBSYSTEM&#x3D;&#x3D;”usb”,ATTRS{idVendor}&#x3D;&#x3D;”18f8”,ATTRS{idProduct}&#x3D;&#x3D;”0f99”,MODE&#x3D;”0666”,GROUP&#x3D;”plugdev”,SYMLINK+&#x3D;”android”,SYMLINK+&#x3D;”android_adb”<br>需要替换: ATTRS{idVendor}&#x3D;&#x3D;”xxxx” ,ATTRS{idProduct}&#x3D;&#x3D;”xxxx”</p>
-<h5 id="3-2-2-3-重启adb服务"><a href="#3-2-2-3-重启adb服务" class="headerlink" title="3.2.2.3 重启adb服务"></a>3.2.2.3 重启adb服务</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:/etc/udev/rules.d$ sudo udevadm control --reload-rules</span><br><span class="line">owner@ubuntu:/etc/udev/rules.d$ sudo service udev restart</span><br><span class="line">owner@ubuntu:/etc/udev/rules.d$ sudo udevadm trigger</span><br><span class="line">owner@ubuntu:~/srcAndroid/out/host/linux-x86/bin$ ./adb kill-server</span><br><span class="line">owner@ubuntu:~/srcAndroid/out/host/linux-x86/bin$ ./adb start-server</span><br></pre></td></tr></table></figure>
-<h5 id="3-2-2-4-确认设备连接成功"><a href="#3-2-2-4-确认设备连接成功" class="headerlink" title="3.2.2.4 确认设备连接成功"></a>3.2.2.4 确认设备连接成功</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
       
     </div>
 
