@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">45</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -195,6 +195,79 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/30/hexo%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="w4lden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="walden">
+      <meta itemprop="description" content="description">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | walden">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/30/hexo%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89/" class="post-title-link" itemprop="url">hexo文章模板的自定义</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-04-30 10:04:40 / Modified: 10:07:38" itemprop="dateCreated datePublished" datetime="2024-04-30T10:04:40+08:00">2024-04-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="1、操作"><a href="#1、操作" class="headerlink" title="1、操作"></a>1、操作</h3><p>每次使用 hexo new “my-article”新建一篇文章时，默认只有title、date、tags这几个属性。<br>我们可以修改scaffolds&#x2F;post.md文件，自定义文章格式的模板，我修改后的内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line"><span class="built_in">date</span>: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">update: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">author:</span><br><span class="line">urlname:</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、参考"><a href="#2、参考" class="headerlink" title="2、参考"></a>2、参考</h3><p><a target="_blank" rel="noopener" href="https://www.qianguyihao.com/post/2020-09-21-hexo-config/">hexo博客的常见配置</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/30/ubuntu%E5%8F%B3%E4%B8%8A%E8%A7%92%E4%B8%8D%E6%98%BE%E7%A4%BAibus%EF%BC%88%E5%8D%B3%E8%BE%93%E5%85%A5%E6%B3%95%E5%9B%BE%E6%A0%87%EF%BC%89%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -225,7 +298,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-30 09:52:51 / Modified: 09:56:47" itemprop="dateCreated datePublished" datetime="2024-04-30T09:52:51+08:00">2024-04-30</time>
+      <time title="Created: 2024-04-30 09:52:51 / Modified: 10:02:52" itemprop="dateCreated datePublished" datetime="2024-04-30T09:52:51+08:00">2024-04-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1103,106 +1176,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Owners-MacBook-Pro:w4lden $ npm install https://github.com/xcodebuild/hexo-asset-image.git</span><br></pre></td></tr></table></figure>
 <p>该插件的作用：将图片等静态资源的引用路径转化为绝对路径。<br>【注】我最开始不是用的上面命令安装的，用的是npm install hexo-asset-image – save，该命令安装的是插件 hexo-asset-image 1.0 ，这个版本有点问题，安装后图片不能正常显示，查看图片路径被渲染成了 &#x2F;.xx&#x2F;abc.png 的格式（xx 是域名后缀）。最后采用上面的命令才成功。</p>
 <h3 id="6、参考"><a href="#6、参考" class="headerlink" title="6、参考"></a>6、参考</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/W_317/article/details/106518894">https://blog.csdn.net/W_317/article/details/106518894</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yyhimmy/p/12583411.html">https://www.cnblogs.com/yyhimmy/p/12583411.html</a><br><a target="_blank" rel="noopener" href="http://www.360doc.com/content/19/0418/20/22888630_829741117.shtml">http://www.360doc.com/content/19/0418/20/22888630_829741117.shtml</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fly_wugui/article/details/108638358">https://blog.csdn.net/fly_wugui/article/details/108638358</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/mqdxiaoxiao/article/details/93796367/">https://blog.csdn.net/mqdxiaoxiao/article/details/93796367/</a><br><a target="_blank" rel="noopener" href="https://juejin.cn/post/7273435095922114560">https://juejin.cn/post/7273435095922114560</a><br><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/">https://theme-next.js.org/docs/getting-started/</a><br><a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="w4lden">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="walden">
-      <meta itemprop="description" content="description">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | walden">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/" class="post-title-link" itemprop="url">aosp添加第三方app</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-02-02 10:15:07" itemprop="dateCreated datePublished" datetime="2024-02-02T10:15:07+08:00">2024-02-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-06 18:10:10" itemprop="dateModified" datetime="2024-03-06T18:10:10+08:00">2024-03-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/source-code-compilation/" itemprop="url" rel="index"><span itemprop="name">source code compilation</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="1、添加apk和mk文件"><a href="#1、添加apk和mk文件" class="headerlink" title="1、添加apk和mk文件"></a>1、添加apk和mk文件</h3><p>新建目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/srcAndroid/packages/apps</span><br><span class="line"><span class="built_in">mkdir</span> WiFiADB</span><br></pre></td></tr></table></figure>
-<p>复制apk到该目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> WiFiADB</span><br><span class="line"><span class="built_in">cp</span> ~/Downloads/WiFiADB.apk .</span><br></pre></td></tr></table></figure>
-<p>创建Android.mk文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit Android.mk</span><br></pre></td></tr></table></figure>
-<p>内容为</p>
-<figure class="highlight make"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">LOCAL_PATH:= <span class="variable">$(<span class="built_in">call</span> my-<span class="built_in">dir</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">include</span> <span class="variable">$(CLEAR_VARS)</span></span><br><span class="line">LOCAL_MODULE := WiFiADB</span><br><span class="line">LOCAL_MODULE_TAGS := optional</span><br><span class="line">LOCAL_SRC_FILES := <span class="variable">$(LOCAL_MODULE)</span>.apk</span><br><span class="line">LOCAL_MODULE_CLASS := APPS</span><br><span class="line">LOCAL_MODULE_SUFFIX := <span class="variable">$(COMMON_ANDROID_PACKAGE_SUFFIX)</span></span><br><span class="line">LOCAL_CERTIFICATE := PRESIGNED</span><br><span class="line"><span class="keyword">include</span> <span class="variable">$(BUILD_PREBUILT)</span></span><br></pre></td></tr></table></figure>
-<p>查看结果</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid/packages/apps/WiFiADB$ <span class="built_in">ls</span> -lt</span><br><span class="line">total 1712</span><br><span class="line">-rw-rw-r-- 1 owner owner     284 Jan 31 12:15 Android.mk</span><br><span class="line">-rwx------ 1 owner owner 1745579 Nov 29  2021 WiFiADB.apk</span><br></pre></td></tr></table></figure>
-<h3 id="2、添加到aosp编译选项"><a href="#2、添加到aosp编译选项" class="headerlink" title="2、添加到aosp编译选项"></a>2、添加到aosp编译选项</h3><p>编辑aosp_sailfish.mk文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid/device/google/marlin$ gedit aosp_sailfish.mk</span><br></pre></td></tr></table></figure>
-<p>添加WiFiADB</p>
-<figure class="highlight make"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PRODUCT_PACKAGES += \</span><br><span class="line">    WiFiADB \</span><br><span class="line">    Launcher3 \</span><br><span class="line">    WallpaperPicker</span><br></pre></td></tr></table></figure>
-<h3 id="3、编译"><a href="#3、编译" class="headerlink" title="3、编译"></a>3、编译</h3><p>正常编译aosp就行</p>
-<h3 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h3><p><a target="_blank" rel="noopener" href="https://www.sunofbeach.net/a/1601128372085383170">https://www.sunofbeach.net/a/1601128372085383170</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011341111/article/details/84312233">https://blog.csdn.net/u011341111/article/details/84312233</a></p>
 
       
     </div>

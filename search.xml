@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>hexo文章模板的自定义</title>
+      <link href="/2024/04/30/hexo%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+      <url>/2024/04/30/hexo%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、操作"><a href="#1、操作" class="headerlink" title="1、操作"></a>1、操作</h3><p>每次使用 hexo new “my-article”新建一篇文章时，默认只有title、date、tags这几个属性。<br>我们可以修改scaffolds&#x2F;post.md文件，自定义文章格式的模板，我修改后的内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line"><span class="built_in">date</span>: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">update: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">author:</span><br><span class="line">urlname:</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure><h3 id="2、参考"><a href="#2、参考" class="headerlink" title="2、参考"></a>2、参考</h3><p><a href="https://www.qianguyihao.com/post/2020-09-21-hexo-config/">hexo博客的常见配置</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ubuntu右上角不显示ibus（即输入法图标）的解决办法</title>
       <link href="/2024/04/30/ubuntu%E5%8F%B3%E4%B8%8A%E8%A7%92%E4%B8%8D%E6%98%BE%E7%A4%BAibus%EF%BC%88%E5%8D%B3%E8%BE%93%E5%85%A5%E6%B3%95%E5%9B%BE%E6%A0%87%EF%BC%89%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
       <url>/2024/04/30/ubuntu%E5%8F%B3%E4%B8%8A%E8%A7%92%E4%B8%8D%E6%98%BE%E7%A4%BAibus%EF%BC%88%E5%8D%B3%E8%BE%93%E5%85%A5%E6%B3%95%E5%9B%BE%E6%A0%87%EF%BC%89%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>

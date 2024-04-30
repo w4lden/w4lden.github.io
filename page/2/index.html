@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">45</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -186,6 +186,106 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="w4lden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="walden">
+      <meta itemprop="description" content="description">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | walden">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/02/aosp%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9app/" class="post-title-link" itemprop="url">aosp添加第三方app</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-02-02 10:15:07" itemprop="dateCreated datePublished" datetime="2024-02-02T10:15:07+08:00">2024-02-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-06 18:10:10" itemprop="dateModified" datetime="2024-03-06T18:10:10+08:00">2024-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/source-code-compilation/" itemprop="url" rel="index"><span itemprop="name">source code compilation</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="1、添加apk和mk文件"><a href="#1、添加apk和mk文件" class="headerlink" title="1、添加apk和mk文件"></a>1、添加apk和mk文件</h3><p>新建目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/srcAndroid/packages/apps</span><br><span class="line"><span class="built_in">mkdir</span> WiFiADB</span><br></pre></td></tr></table></figure>
+<p>复制apk到该目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> WiFiADB</span><br><span class="line"><span class="built_in">cp</span> ~/Downloads/WiFiADB.apk .</span><br></pre></td></tr></table></figure>
+<p>创建Android.mk文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit Android.mk</span><br></pre></td></tr></table></figure>
+<p>内容为</p>
+<figure class="highlight make"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">LOCAL_PATH:= <span class="variable">$(<span class="built_in">call</span> my-<span class="built_in">dir</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">include</span> <span class="variable">$(CLEAR_VARS)</span></span><br><span class="line">LOCAL_MODULE := WiFiADB</span><br><span class="line">LOCAL_MODULE_TAGS := optional</span><br><span class="line">LOCAL_SRC_FILES := <span class="variable">$(LOCAL_MODULE)</span>.apk</span><br><span class="line">LOCAL_MODULE_CLASS := APPS</span><br><span class="line">LOCAL_MODULE_SUFFIX := <span class="variable">$(COMMON_ANDROID_PACKAGE_SUFFIX)</span></span><br><span class="line">LOCAL_CERTIFICATE := PRESIGNED</span><br><span class="line"><span class="keyword">include</span> <span class="variable">$(BUILD_PREBUILT)</span></span><br></pre></td></tr></table></figure>
+<p>查看结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid/packages/apps/WiFiADB$ <span class="built_in">ls</span> -lt</span><br><span class="line">total 1712</span><br><span class="line">-rw-rw-r-- 1 owner owner     284 Jan 31 12:15 Android.mk</span><br><span class="line">-rwx------ 1 owner owner 1745579 Nov 29  2021 WiFiADB.apk</span><br></pre></td></tr></table></figure>
+<h3 id="2、添加到aosp编译选项"><a href="#2、添加到aosp编译选项" class="headerlink" title="2、添加到aosp编译选项"></a>2、添加到aosp编译选项</h3><p>编辑aosp_sailfish.mk文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">owner@ubuntu:~/srcAndroid/device/google/marlin$ gedit aosp_sailfish.mk</span><br></pre></td></tr></table></figure>
+<p>添加WiFiADB</p>
+<figure class="highlight make"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PRODUCT_PACKAGES += \</span><br><span class="line">    WiFiADB \</span><br><span class="line">    Launcher3 \</span><br><span class="line">    WallpaperPicker</span><br></pre></td></tr></table></figure>
+<h3 id="3、编译"><a href="#3、编译" class="headerlink" title="3、编译"></a>3、编译</h3><p>正常编译aosp就行</p>
+<h3 id="4、参考"><a href="#4、参考" class="headerlink" title="4、参考"></a>4、参考</h3><p><a target="_blank" rel="noopener" href="https://www.sunofbeach.net/a/1601128372085383170">https://www.sunofbeach.net/a/1601128372085383170</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011341111/article/details/84312233">https://blog.csdn.net/u011341111/article/details/84312233</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -975,90 +1075,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h3 id="1、快捷键"><a href="#1、快捷键" class="headerlink" title="1、快捷键"></a>1、快捷键</h3><p>注释&#x2F;取消注释    command+：</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="w4lden">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="walden">
-      <meta itemprop="description" content="description">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | walden">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/12/18/wingIDE%E8%B0%83%E8%AF%95idapython%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">wingIDE调试idapython脚本</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-12-18 22:54:39" itemprop="dateCreated datePublished" datetime="2019-12-18T22:54:39+08:00">2019-12-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-02-20 22:07:42" itemprop="dateModified" datetime="2024-02-20T22:07:42+08:00">2024-02-20</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>可以使用wingIDE作为外部调试器，调试idapython脚本。具体设置见wingIDE说明文档–<br>“Table of Contents &gt;&gt; How-Tos &gt;&gt; Unmaintained How-Tos &gt;&gt; Using Wing with IDA Python”</p>
-<h3 id="1、配置wingIDE环境，下断点"><a href="#1、配置wingIDE环境，下断点" class="headerlink" title="1、配置wingIDE环境，下断点"></a>1、配置wingIDE环境，下断点</h3><p>根据说明配置好后，用wingIDE打开目标idapython脚本，并且在目标idapython文件中下好断点</p>
-<h3 id="2、运行idapython脚本"><a href="#2、运行idapython脚本" class="headerlink" title="2、运行idapython脚本"></a>2、运行idapython脚本</h3><p>打开ida，加载分析好的idb文件，文件菜单，运行目标idapython脚本，则触发断点，开始调试</p>
-<h3 id="3、自己的两点总结："><a href="#3、自己的两点总结：" class="headerlink" title="3、自己的两点总结："></a>3、自己的两点总结：</h3><ul>
-<li>wingide是调试器，ida运行idapython脚本作为客户端，调试的时候ida处于挂起状态\<img src="wingide_ida.png" width="90%" height="90%">
-可以看到ida在调试过程中挂起了
-<img src="ida.png" width="90%" height="90%"></li>
-<li>一次调试完成后，要重新运行ida，才可以进行第二次调试，否则第二次断点断不下来</li>
-</ul>
 
       
     </div>
